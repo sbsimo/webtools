@@ -10,7 +10,7 @@ Highcharts.chart('speedometer', {
     },
 
     title: {
-        text: 'Global surface of active vegetation'
+        text: 'Active vegetation'
     },
 
     pane: {
@@ -39,16 +39,16 @@ Highcharts.chart('speedometer', {
         },
         plotBands: [{
             from: 0,
-            to: 35,
+            to: 47,
             color: '#DF5353', //red
             thickness: 20
         }, {
-            from: 35,
-            to: 50,
+            from: 47,
+            to: 52,
             color: '#DDDF0D', // yellow
             thickness: 20
         }, {
-            from: 50,
+            from: 52,
             to: 100,
             color: '#55BF3B', // green
             thickness: 20
@@ -59,10 +59,10 @@ Highcharts.chart('speedometer', {
         name: 'Active vegetation',
         data: [46.0],
         tooltip: {
-            valueSuffix: ' % of the global surface'
+            valueSuffix: ' % of the global land surface'
         },
         dataLabels: {
-            format: '{y} %',
+            format: 'covers {y} % of global land surface',
             borderWidth: 0,
             color: (
                 Highcharts.defaultOptions.title &&
