@@ -1,0 +1,141 @@
+{
+  "chart": {
+    "type": "column",
+    "height": "800"
+  },
+  "title": {
+    "text": "Air transport of passengers in the EU (2014)"
+  },
+  "xAxis": [
+    {
+      "type": "category"
+    }
+  ],
+  "yAxis": [
+    {
+      "title": {
+        "text": "Passengers carried"
+      }
+    }
+  ],
+  "series": [
+    {
+      "type": "column",
+      "animation": false,
+      "data": [
+        {
+          "y": 28775060,
+          "name": "Belgium"
+        },
+        {
+          "y": 7518998,
+          "name": "Bulgaria"
+        },
+        {
+          "y": 12079873,
+          "name": "Czechia"
+        },
+        {
+          "y": 29003996,
+          "name": "Denmark"
+        },
+        {
+          "y": 186445791,
+          "name": "Germany"
+        },
+        {
+          "y": 2019806,
+          "name": "Estonia"
+        },
+        {
+          "y": 26310826,
+          "name": "Ireland"
+        },
+        {
+          "y": 39117833,
+          "name": "Greece"
+        },
+        {
+          "y": 165354382,
+          "name": "Spain"
+        },
+        {
+          "y": 136361561,
+          "name": "France"
+        },
+        {
+          "y": 6140608,
+          "name": "Croatia"
+        },
+        {
+          "y": 121156068,
+          "name": "Italy"
+        },
+        {
+          "y": 7328546,
+          "name": "Cyprus"
+        },
+        {
+          "y": 4802282,
+          "name": "Latvia"
+        },
+        {
+          "y": 3798110,
+          "name": "Lithhhhhuania"
+        },
+        {
+          "y": 2433939,
+          "name": "Luxembourg"
+        },
+        {
+          "y": 9054848,
+          "name": "Hungary"
+        },
+        {
+          "y": 4290032,
+          "name": "Malta"
+        },
+        {
+          "y": 60962778,
+          "name": "Netherlands"
+        },
+        {
+          "y": 26378676,
+          "name": "Austria"
+        },
+        {
+          "y": 25713682,
+          "name": "Poland"
+        },
+        {
+          "y": 32558076,
+          "name": "Portugal"
+        },
+        {
+          "y": 10907487,
+          "name": "Romania"
+        },
+        {
+          "y": 1307128,
+          "name": "Slovenia"
+        },
+        {
+          "y": 1671290,
+          "name": "Slovakia"
+        },
+        {
+          "y": 17171931,
+          "name": "Finland"
+        },
+        {
+          "y": 32765412,
+          "name": "Sweden"
+        },
+        {
+          "y": 220021502,
+          "name": "United Kingdom"
+        }
+      ]
+    }
+  ]
+}
