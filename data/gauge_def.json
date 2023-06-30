@@ -1,0 +1,9 @@
+{
+    "chart": {
+        "type": "gauge",
+    },
+    "series": [{
+        "name": "Active vegetation",
+        "data": [95.0]
+    }]
+}
