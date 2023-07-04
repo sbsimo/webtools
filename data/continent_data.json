@@ -1,6 +1,6 @@
 {
   "chart": {
-    "type": "column"
+    "type": "bar"
   },
   "title": {
     "text": "Active vegetation within land cover class"
