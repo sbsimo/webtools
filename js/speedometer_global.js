@@ -1,4 +1,4 @@
-Highcharts.chart('speedometer', {
+Highcharts.chart('speedometer_global', {
 
     chart: {
         type: 'gauge',
@@ -43,7 +43,7 @@ Highcharts.chart('speedometer', {
             color: '#DF5353', //red
             thickness: 20
         }, {
-            from: 47,
+            from: 51.5,
             to: 54.9,
             color: '#DDDF0D', // yellow
             thickness: 20

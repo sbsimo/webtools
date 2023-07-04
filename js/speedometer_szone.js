@@ -1,4 +1,4 @@
-Highcharts.chart('speedometer', {
+Highcharts.chart('speedometer_szone', {
 
     chart: {
         type: 'gauge',
@@ -39,16 +39,16 @@ Highcharts.chart('speedometer', {
         },
         plotBands: [{
             from: 0,
-            to: 51.5,
+            to: 37.8,
             color: '#DF5353', //red
             thickness: 20
         }, {
-            from: 47,
-            to: 54.9,
+            from: 37.8,
+            to: 40.9,
             color: '#DDDF0D', // yellow
             thickness: 20
         }, {
-            from: 54.9,
+            from: 40.9,
             to: 100,
             color: '#55BF3B', // green
             thickness: 20
@@ -57,7 +57,7 @@ Highcharts.chart('speedometer', {
 
     series: [{
         name: 'Active vegetation',
-        data: [51.2],
+        data: [44.1],
         tooltip: {
             valueSuffix: ' % of the global land surface'
         },
