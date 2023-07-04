@@ -1,0 +1,26 @@
+{
+  "chart": {
+    "type": "column"
+  },
+  "title": {
+    "text": "Airport transport of passengers in baltic countries"
+  },
+  "data": {
+    "csv": "csv"
+  },
+  "plotOptions": {
+    "series": {
+      "marker": {
+        "enabled": false
+      }
+    }
+  },
+  "xAxis": {
+    "categories": []
+  },
+  "yAxis": {
+    "title": {
+      "text": "Units"
+    }
+  }
+}
