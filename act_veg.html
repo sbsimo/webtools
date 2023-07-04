@@ -48,6 +48,104 @@
     }</script>
 
     <script type="application/json">{
+      "service": "map",
+      "version": "3.0",
+      "map": {
+        "background": false
+      },
+      "layers": {
+        "chorojson": [
+          {
+            "data": {
+              "source": {
+                "IT": {
+                  "value": 10,
+                  "text": "gibbone"
+                },
+                "FR": {
+                  "value": -5,
+                  "text": "scibon"
+                },
+                "ZM": {
+                  "value": 8,
+                  "text": "gibbon"
+                },
+                "US": {
+                  "value": 5,
+                  "text": "ueue"
+                }
+              }
+            },
+            "options": {
+              "ranges": [
+                {
+                  "stop": 0,
+                  "style": "theme_5_25"
+                },
+                {
+                  "stop": 20,
+                  "style": "theme_5_50"
+                },
+                {
+                  "stop": 40,
+                  "style": "theme_5_75"
+                },
+                {
+                  "stop": 60,
+                  "style": "theme_5_100"
+                },
+                {
+                  "stop": 80,
+                  "style": "theme_5_+"
+                },
+                {
+                  "stop": 100,
+                  "style": "theme_5_++"
+                }
+              ],
+              "legend": {
+                "type": "gradient"
+              }
+            }
+          }
+        ]
+      }
+    }</script>
+
+    <script type="application/json">{
+      "service": "charts",
+      "version": "2.0",
+      "data": "https://sbsimo.github.io/webtools/data/continent_data.json",
+      "dataset": {
+        "format": "csv",
+        "source": "https://sbsimo.github.io/webtools/data/act_veg_by_cont.csv"
+      }
+    }</script>
+
+    <script type="application/json">{
+      "service": "charts",
+      "version": "2.0",
+      "data": {
+        "chart": {
+          "type": "column",
+          "inverted": true
+        },
+        "title": {
+          "text": "Country-level values"
+        },
+        "plotOptions": {
+          "series": {
+            "stacking": "normal"
+          }
+        }
+      },
+      "dataset": {
+        "format": "xls",
+        "source": "https://sbsimo.github.io/webtools/data/act_veg_by_country.xlsx"
+      }
+    }</script>
+
+    <script type="application/json">{
       "service": "charts",
       "version": "2.0",
       "data": "https://sbsimo.github.io/webtools/data/chart_def.json"
