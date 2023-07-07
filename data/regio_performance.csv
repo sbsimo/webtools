@@ -1,241 +1,241 @@
-,CNTR_ID,performance,Region 1
-0,AF,-2.0,Southern Asia
-1,BD,-2.0,Southern Asia
-2,BT,-2.0,Southern Asia
-3,IN,-2.0,Southern Asia
-4,IR,-2.0,Southern Asia
-5,MV,-2.0,Southern Asia
-6,NP,-2.0,Southern Asia
-7,PK,-2.0,Southern Asia
-8,LK,-2.0,Southern Asia
-9,DK,-13.0,Northern Europe
-10,EE,-13.0,Northern Europe
-11,FO,-13.0,Northern Europe
-12,FI,-13.0,Northern Europe
-13,GG,-13.0,Northern Europe
-14,IS,-13.0,Northern Europe
-15,IE,-13.0,Northern Europe
-16,IM,-13.0,Northern Europe
-17,JE,-13.0,Northern Europe
-18,LV,-13.0,Northern Europe
-19,LT,-13.0,Northern Europe
-20,NO,-13.0,Northern Europe
-21,SJ,-13.0,Northern Europe
-22,SE,-13.0,Northern Europe
-23,UK,-13.0,Northern Europe
-24,AL,-3.0,Southern Europe
-25,AD,-3.0,Southern Europe
-26,BA,-3.0,Southern Europe
-27,HR,-3.0,Southern Europe
-28,GI,-3.0,Southern Europe
-29,EL,-3.0,Southern Europe
-30,VA,-3.0,Southern Europe
-31,IT,-3.0,Southern Europe
-32,MT,-3.0,Southern Europe
-33,ME,-3.0,Southern Europe
-34,MK,-3.0,Southern Europe
-35,PT,-3.0,Southern Europe
-36,SM,-3.0,Southern Europe
-37,RS,-3.0,Southern Europe
-38,SI,-3.0,Southern Europe
-39,ES,-3.0,Southern Europe
-40,DZ,8.0,Northern Africa
-41,EG,8.0,Northern Africa
-42,LY,8.0,Northern Africa
-43,MA,8.0,Northern Africa
-44,SD,8.0,Northern Africa
-45,TN,8.0,Northern Africa
-46,EH,8.0,Northern Africa
-47,AS,18.0,Polynesia
-48,CK,18.0,Polynesia
-49,PF,18.0,Polynesia
-50,NU,18.0,Polynesia
-51,PN,18.0,Polynesia
-52,WS,18.0,Polynesia
-53,TK,18.0,Polynesia
-54,TO,18.0,Polynesia
-55,TV,18.0,Polynesia
-56,WF,18.0,Polynesia
-57,AO,-0.0,Middle Africa
-58,CM,-0.0,Middle Africa
-59,CF,-0.0,Middle Africa
-60,TD,-0.0,Middle Africa
-61,CG,-0.0,Middle Africa
-62,CD,-0.0,Middle Africa
-63,GQ,-0.0,Middle Africa
-64,GA,-0.0,Middle Africa
-65,ST,-0.0,Middle Africa
-66,AI,-2.0,Caribbean
-67,AG,-2.0,Caribbean
-68,AW,-2.0,Caribbean
-69,BS,-2.0,Caribbean
-70,BB,-2.0,Caribbean
-71,BQ,-2.0,Caribbean
-72,VG,-2.0,Caribbean
-73,KY,-2.0,Caribbean
-74,CU,-2.0,Caribbean
-75,CW,-2.0,Caribbean
-76,DM,-2.0,Caribbean
-77,DO,-2.0,Caribbean
-78,GD,-2.0,Caribbean
-79,HT,-2.0,Caribbean
-80,JM,-2.0,Caribbean
-81,MS,-2.0,Caribbean
-82,PR,-2.0,Caribbean
-83,BL,-2.0,Caribbean
-84,KN,-2.0,Caribbean
-85,LC,-2.0,Caribbean
-86,VC,-2.0,Caribbean
-87,SX,-2.0,Caribbean
-88,TT,-2.0,Caribbean
-89,TC,-2.0,Caribbean
-90,VI,-2.0,Caribbean
-91,AR,-1.0,South America
-92,BO,-1.0,South America
-93,BV,-1.0,South America
-94,BR,-1.0,South America
-95,CL,-1.0,South America
-96,CO,-1.0,South America
-97,EC,-1.0,South America
-98,FK,-1.0,South America
-99,GY,-1.0,South America
-100,PY,-1.0,South America
-101,PE,-1.0,South America
-102,GS,-1.0,South America
-103,SR,-1.0,South America
-104,UY,-1.0,South America
-105,VE,-1.0,South America
-106,AM,-0.0,Western Asia
-107,AZ,-0.0,Western Asia
-108,BH,-0.0,Western Asia
-109,CY,-0.0,Western Asia
-110,GE,-0.0,Western Asia
-111,IQ,-0.0,Western Asia
-112,IL,-0.0,Western Asia
-113,JO,-0.0,Western Asia
-114,KW,-0.0,Western Asia
-115,LB,-0.0,Western Asia
-116,OM,-0.0,Western Asia
-117,QA,-0.0,Western Asia
-118,SA,-0.0,Western Asia
-119,PS,-0.0,Western Asia
-120,SY,-0.0,Western Asia
-121,TR,-0.0,Western Asia
-122,AE,-0.0,Western Asia
-123,YE,-0.0,Western Asia
-124,AU,20.0,Australia and New Zealand
-125,CX,20.0,Australia and New Zealand
-126,CC,20.0,Australia and New Zealand
-127,HM,20.0,Australia and New Zealand
-128,NZ,20.0,Australia and New Zealand
-129,NF,20.0,Australia and New Zealand
-130,AT,-12.0,Western Europe
-131,BE,-12.0,Western Europe
-132,FR,-12.0,Western Europe
-133,DE,-12.0,Western Europe
-134,LI,-12.0,Western Europe
-135,LU,-12.0,Western Europe
-136,MC,-12.0,Western Europe
-137,NL,-12.0,Western Europe
-138,CH,-12.0,Western Europe
-139,BY,-30.0,Eastern Europe
-140,BG,-30.0,Eastern Europe
-141,CZ,-30.0,Eastern Europe
-142,HU,-30.0,Eastern Europe
-143,PL,-30.0,Eastern Europe
-144,MD,-30.0,Eastern Europe
-145,RO,-30.0,Eastern Europe
-146,RU,-30.0,Eastern Europe
-147,SK,-30.0,Eastern Europe
-148,UA,-30.0,Eastern Europe
-149,BZ,2.0,Central America
-150,CR,2.0,Central America
-151,SV,2.0,Central America
-152,GT,2.0,Central America
-153,HN,2.0,Central America
-154,MX,2.0,Central America
-155,NI,2.0,Central America
-156,PA,2.0,Central America
-157,BJ,-3.0,Western Africa
-158,BF,-3.0,Western Africa
-159,CV,-3.0,Western Africa
-160,CI,-3.0,Western Africa
-161,GM,-3.0,Western Africa
-162,GH,-3.0,Western Africa
-163,GN,-3.0,Western Africa
-164,GW,-3.0,Western Africa
-165,LR,-3.0,Western Africa
-166,ML,-3.0,Western Africa
-167,MR,-3.0,Western Africa
-168,NE,-3.0,Western Africa
-169,NG,-3.0,Western Africa
-170,SH,-3.0,Western Africa
-171,SN,-3.0,Western Africa
-172,SL,-3.0,Western Africa
-173,TG,-3.0,Western Africa
-174,BM,-5.0,Northern America
-175,CA,-5.0,Northern America
-176,GL,-5.0,Northern America
-177,PM,-5.0,Northern America
-178,US,-5.0,Northern America
-179,BW,39.0,Southern Africa
-180,SZ,39.0,Southern Africa
-181,LS,39.0,Southern Africa
-182,,39.0,Southern Africa
-183,ZA,39.0,Southern Africa
-184,IO,-2.0,Eastern Africa
-185,BI,-2.0,Eastern Africa
-186,KM,-2.0,Eastern Africa
-187,DJ,-2.0,Eastern Africa
-188,ER,-2.0,Eastern Africa
-189,ET,-2.0,Eastern Africa
-190,TF,-2.0,Eastern Africa
-191,KE,-2.0,Eastern Africa
-192,MG,-2.0,Eastern Africa
-193,MW,-2.0,Eastern Africa
-194,MU,-2.0,Eastern Africa
-195,MZ,-2.0,Eastern Africa
-196,RW,-2.0,Eastern Africa
-197,SC,-2.0,Eastern Africa
-198,SO,-2.0,Eastern Africa
-199,SS,-2.0,Eastern Africa
-200,UG,-2.0,Eastern Africa
-201,TZ,-2.0,Eastern Africa
-202,ZM,-2.0,Eastern Africa
-203,ZW,-2.0,Eastern Africa
-204,BN,-7.0,South-eastern Asia
-205,KH,-7.0,South-eastern Asia
-206,ID,-7.0,South-eastern Asia
-207,LA,-7.0,South-eastern Asia
-208,MY,-7.0,South-eastern Asia
-209,MM,-7.0,South-eastern Asia
-210,PH,-7.0,South-eastern Asia
-211,SG,-7.0,South-eastern Asia
-212,TH,-7.0,South-eastern Asia
-213,TL,-7.0,South-eastern Asia
-214,VN,-7.0,South-eastern Asia
-215,CN,-11.0,Eastern Asia
-216,HK,-11.0,Eastern Asia
-217,MO,-11.0,Eastern Asia
-218,KP,-11.0,Eastern Asia
-219,JP,-11.0,Eastern Asia
-220,MN,-11.0,Eastern Asia
-221,KR,-11.0,Eastern Asia
-222,FJ,5.0,Melanesia
-223,NC,5.0,Melanesia
-224,PG,5.0,Melanesia
-225,SB,5.0,Melanesia
-226,VU,5.0,Melanesia
-227,GU,50.0,Micronesia
-228,KI,50.0,Micronesia
-229,MH,50.0,Micronesia
-230,FM,50.0,Micronesia
-231,NR,50.0,Micronesia
-232,MP,50.0,Micronesia
-233,PW,50.0,Micronesia
-234,UM,50.0,Micronesia
-235,KZ,-21.0,Central Asia
-236,KG,-21.0,Central Asia
-237,TJ,-21.0,Central Asia
-238,TM,-21.0,Central Asia
-239,UZ,-21.0,Central Asia
+CNTR_ID,performance
+AF,-2
+BD,-2
+BT,-2
+IN,-2
+IR,-2
+MV,-2
+NP,-2
+PK,-2
+LK,-2
+DK,-13
+EE,-13
+FO,-13
+FI,-13
+GG,-13
+IS,-13
+IE,-13
+IM,-13
+JE,-13
+LV,-13
+LT,-13
+NO,-13
+SJ,-13
+SE,-13
+UK,-13
+AL,-3
+AD,-3
+BA,-3
+HR,-3
+GI,-3
+EL,-3
+VA,-3
+IT,-3
+MT,-3
+ME,-3
+MK,-3
+PT,-3
+SM,-3
+RS,-3
+SI,-3
+ES,-3
+DZ,8
+EG,8
+LY,8
+MA,8
+SD,8
+TN,8
+EH,8
+AS,18
+CK,18
+PF,18
+NU,18
+PN,18
+WS,18
+TK,18
+TO,18
+TV,18
+WF,18
+AO,0
+CM,0
+CF,0
+TD,0
+CG,0
+CD,0
+GQ,0
+GA,0
+ST,0
+AI,-2
+AG,-2
+AW,-2
+BS,-2
+BB,-2
+BQ,-2
+VG,-2
+KY,-2
+CU,-2
+CW,-2
+DM,-2
+DO,-2
+GD,-2
+HT,-2
+JM,-2
+MS,-2
+PR,-2
+BL,-2
+KN,-2
+LC,-2
+VC,-2
+SX,-2
+TT,-2
+TC,-2
+VI,-2
+AR,-1
+BO,-1
+BV,-1
+BR,-1
+CL,-1
+CO,-1
+EC,-1
+FK,-1
+GY,-1
+PY,-1
+PE,-1
+GS,-1
+SR,-1
+UY,-1
+VE,-1
+AM,0
+AZ,0
+BH,0
+CY,0
+GE,0
+IQ,0
+IL,0
+JO,0
+KW,0
+LB,0
+OM,0
+QA,0
+SA,0
+PS,0
+SY,0
+TR,0
+AE,0
+YE,0
+AU,20
+CX,20
+CC,20
+HM,20
+NZ,20
+NF,20
+AT,-12
+BE,-12
+FR,-12
+DE,-12
+LI,-12
+LU,-12
+MC,-12
+NL,-12
+CH,-12
+BY,-30
+BG,-30
+CZ,-30
+HU,-30
+PL,-30
+MD,-30
+RO,-30
+RU,-30
+SK,-30
+UA,-30
+BZ,2
+CR,2
+SV,2
+GT,2
+HN,2
+MX,2
+NI,2
+PA,2
+BJ,-3
+BF,-3
+CV,-3
+CI,-3
+GM,-3
+GH,-3
+GN,-3
+GW,-3
+LR,-3
+ML,-3
+MR,-3
+NE,-3
+NG,-3
+SH,-3
+SN,-3
+SL,-3
+TG,-3
+BM,-5
+CA,-5
+GL,-5
+PM,-5
+US,-5
+BW,39
+SZ,39
+LS,39
+,39
+ZA,39
+IO,-2
+BI,-2
+KM,-2
+DJ,-2
+ER,-2
+ET,-2
+TF,-2
+KE,-2
+MG,-2
+MW,-2
+MU,-2
+MZ,-2
+RW,-2
+SC,-2
+SO,-2
+SS,-2
+UG,-2
+TZ,-2
+ZM,-2
+ZW,-2
+BN,-7
+KH,-7
+ID,-7
+LA,-7
+MY,-7
+MM,-7
+PH,-7
+SG,-7
+TH,-7
+TL,-7
+VN,-7
+CN,-11
+HK,-11
+MO,-11
+KP,-11
+JP,-11
+MN,-11
+KR,-11
+FJ,5
+NC,5
+PG,5
+SB,5
+VU,5
+GU,50
+KI,50
+MH,50
+FM,50
+NR,50
+MP,50
+PW,50
+UM,50
+KZ,-21
+KG,-21
+TJ,-21
+TM,-21
+UZ,-21
