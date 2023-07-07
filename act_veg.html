@@ -51,62 +51,66 @@
       "service": "map",
       "version": "3.0",
       "map": {
-        "background": false
+        "background": false,
+        "center": [
+          41.50857729743935,
+          -9.843750000000002
+        ],
+        "zoom": 1,
+        "maxZoom": 6
       },
       "layers": {
         "chorojson": [
           {
             "data": {
-              "source": {
-                "IT": {
-                  "value": 10,
-                  "text": "gibbone"
-                },
-                "FR": {
-                  "value": -5,
-                  "text": "scibon"
-                },
-                "ZM": {
-                  "value": 8,
-                  "text": "gibbon"
-                },
-                "US": {
-                  "value": 5,
-                  "text": "ueue"
-                }
+              "format": "csv",
+              "source": "https://sbsimo.github.io/webtools/data/regio_performancee.csv",
+              "options": {
+                "decimal": "auto"
               }
             },
             "options": {
               "ranges": [
                 {
                   "stop": 0,
-                  "style": "theme_5_25"
+                  "style": "theme_8_25"
                 },
                 {
                   "stop": 20,
-                  "style": "theme_5_50"
+                  "style": "theme_8_50"
                 },
                 {
                   "stop": 40,
-                  "style": "theme_5_75"
+                  "style": "theme_8_75"
                 },
                 {
                   "stop": 60,
-                  "style": "theme_5_100"
+                  "style": "theme_8_100"
                 },
                 {
                   "stop": 80,
-                  "style": "theme_5_+"
+                  "style": "theme_8_+"
                 },
                 {
                   "stop": 100,
-                  "style": "theme_5_++"
+                  "style": "theme_8_++"
                 }
               ],
               "legend": {
                 "type": "gradient"
+              },
+              "format": {
+                "unit": "%"
               }
             }
+          }
+        ]
+      },
+      "sidebar": {
+        "download": [
+          {
+            "name": "regio_performance",
+            "url": "https://sbsimo.github.io/webtools/data/regio_performancee.csv"
           }
         ]
       }
