@@ -10,7 +10,7 @@ Highcharts.chart('speedometer_global', {
     },
 
     title: {
-        text: 'Active vegetation'
+        text: 'Dekad 21-30 September, 2022'
     },
 
     pane: {
@@ -62,7 +62,7 @@ Highcharts.chart('speedometer_global', {
             valueSuffix: ' % of the global land surface'
         },
         dataLabels: {
-            format: 'covers {y} % of global land surface',
+            format: 'Active vegetation covers {y} % of global land surface',
             borderWidth: 0,
             color: (
                 Highcharts.defaultOptions.title &&

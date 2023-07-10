@@ -10,7 +10,7 @@ Highcharts.chart('speedometer_nzone', {
     },
 
     title: {
-        text: 'Active vegetation'
+        text: 'Northern zone'
     },
 
     pane: {
@@ -59,10 +59,10 @@ Highcharts.chart('speedometer_nzone', {
         name: 'Active vegetation',
         data: [43.9],
         tooltip: {
-            valueSuffix: ' % of the global land surface'
+            valueSuffix: ' % of the northern-zone surface'
         },
         dataLabels: {
-            format: 'covers {y} % of global land surface',
+            format: 'Active vegetation covers {y} % of northern-zone surface',
             borderWidth: 0,
             color: (
                 Highcharts.defaultOptions.title &&

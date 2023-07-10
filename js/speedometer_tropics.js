@@ -10,7 +10,7 @@ Highcharts.chart('speedometer_tropics', {
     },
 
     title: {
-        text: 'Active vegetation'
+        text: 'Tropical zone'
     },
 
     pane: {
@@ -59,10 +59,10 @@ Highcharts.chart('speedometer_tropics', {
         name: 'Active vegetation',
         data: [62.7],
         tooltip: {
-            valueSuffix: ' % of the global land surface'
+            valueSuffix: ' % of the tropical-zone surface'
         },
         dataLabels: {
-            format: 'covers {y} % of global land surface',
+            format: 'Active vegetation covers {y} % of tropical-zone surface',
             borderWidth: 0,
             color: (
                 Highcharts.defaultOptions.title &&
