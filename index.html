@@ -33,18 +33,37 @@
 
 	</header>
 <hr/>
-<div id="speedometer"></div><script type="application/json">{
-	"service": "charts",
-	"version": "2.0",
-	"custom": [
-		"js/speedometer.js"
-	]
-}</script>
-<div id="text" class="container" style="padding-bottom: 40px;">
-	This land thermometer indicates the proportion of land with active vegetation, extracted by thresholding values of CGLS FAPAR300 higher than 0.2
-	The latest source data update is Sep 30, 2022
-</div>
 
+<div style="display:flex">
+    <div title="Proportion of land with photosynthetic active vegetation, extracted by thresholding values of CGLS FAPAR 300m higher than 0.2" style="flex:1">
+        <div id="speedometer"></div><script type="application/json">{
+            "service": "charts",
+            "version": "2.0",
+            "custom": [
+                "js/speedometer.js"
+            ]
+        }</script>
+        <p style="text-align:center">valid as of 21-30 September, 2022</p>
+        <a href="act_veg.html">
+            <img src="img/plants-icon-14.jpg" height="45" style="display:block;margin-left:auto;margin-right:auto;">
+        </a>
+    </div>
+
+  <div title="proportion of soil surface with normal water content, that is where the water content is within plus/minus 1.5 times the standard deviation for the time series" style="flex:1">
+    <div id="speedometer_swi"></div><script type="application/json">{
+	  "service": "charts",
+	  "version": "2.0",
+	  "custom": [
+	    	"js/speedometer_swi.js"
+	  ]
+    }</script>
+    <p style="text-align:center">valid as of 11-20 February, 2023</p>
+    <a href="soil_water.html">
+      <img src="img/soil-water_icon.png" height="55" style="display:block;margin-left:auto;margin-right:auto;">
+    </a>
+  </div>
+</div>
+  <br>
 <section class="">
   <footer class="text-center text-white" style="background-color: #0a4275;">
     <div class="container p-4 pb-0">

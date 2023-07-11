@@ -1,4 +1,4 @@
-Highcharts.chart('speedometer', {
+Highcharts.chart('speedometer_swi', {
 
     chart: {
         type: 'gauge',
@@ -10,7 +10,7 @@ Highcharts.chart('speedometer', {
     },
 
     title: {
-        text: 'Active vegetation'
+        text: 'Soil water'
     },
 
     pane: {
@@ -39,16 +39,16 @@ Highcharts.chart('speedometer', {
         },
         plotBands: [{
             from: 0,
-            to: 51.5,
+            to: 70.0,
             color: '#DF5353', //red
             thickness: 20
         }, {
-            from: 51.5,
-            to: 54.9,
+            from: 70.0,
+            to: 85.0,
             color: '#DDDF0D', // yellow
             thickness: 20
         }, {
-            from: 54.9,
+            from: 85.0,
             to: 100,
             color: '#55BF3B', // green
             thickness: 20
@@ -56,13 +56,13 @@ Highcharts.chart('speedometer', {
     },
 
     series: [{
-        name: 'Active vegetation',
-        data: [51.2],
+        name: 'Soil water content',
+        data: [86.0],
         tooltip: {
-            valueSuffix: ' % of the global land surface'
+            valueSuffix: 'normal over % of the global land surface'
         },
         dataLabels: {
-            format: 'covers {y} % of global land surface',
+            format: 'normal content over {y} % of global land surface',
             borderWidth: 0,
             color: (
                 Highcharts.defaultOptions.title &&
