@@ -2,9 +2,6 @@
   "chart": {
     "type": "bar"
   },
-  "title": {
-    "text": "Active vegetation within land cover class"
-  },
   "data": {
     "csv": "csv"
   },
