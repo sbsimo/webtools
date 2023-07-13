@@ -6,7 +6,7 @@ Highcharts.chart('speedometer_tropics', {
         plotBackgroundImage: null,
         plotBorderWidth: 0,
         plotShadow: false,
-        height: '20%'
+        height: '50%'
     },
 
     title: {
