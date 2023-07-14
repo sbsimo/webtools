@@ -39,16 +39,16 @@ Highcharts.chart('speedometer_swi', {
         },
         plotBands: [{
             from: 0,
-            to: 70.0,
+            to: 48.8,
             color: '#DF5353', //red
             thickness: 20
         }, {
-            from: 70.0,
-            to: 85.0,
+            from: 48.8,
+            to: 52.8,
             color: '#DDDF0D', // yellow
             thickness: 20
         }, {
-            from: 85.0,
+            from: 52.8,
             to: 100,
             color: '#55BF3B', // green
             thickness: 20
@@ -57,7 +57,7 @@ Highcharts.chart('speedometer_swi', {
 
     series: [{
         name: 'Soil water content',
-        data: [86.0],
+        data: [46.5],
         tooltip: {
             valueSuffix: 'normal over % of the global land surface'
         },
