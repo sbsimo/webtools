@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <script defer src="https://europa.eu/webtools/load.js" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <title>Title</title>
+</head>
+
+<body>
+
+    <h1 style="text-align:center">Normal soil water content - Work in Progress</h1>
+
+    <div id="speedometer_global"></div><script type="application/json">{
+        "service": "charts",
+        "version": "2.0",
+        "custom": [
+            "js/speedometer_global.js"
+        ]
+    }</script>
+
+    <div id="three_speedometers" style="display:flex;justify-content:space-between;height:300px;">
+
+    <div id="speedometer_nzone"></div><script type="application/json">{
+        "service": "charts",
+        "version": "2.0",
+        "custom": [
+            "js/speedometer_nzone.js"
+        ]
+    }</script>
+
+    <div id="speedometer_tropics"></div><script type="application/json">{
+        "service": "charts",
+        "version": "2.0",
+        "custom": [
+            "js/speedometer_tropics.js"
+        ]
+    }</script>
+
+    <div id="speedometer_szone"></div><script type="application/json">{
+        "service": "charts",
+        "version": "2.0",
+        "custom": [
+            "js/speedometer_szone.js"
+        ]
+    }</script>
+
+    </div>
+
+    <h2 style="text-align:center">Active vegetation - world regional performance</h2>
+
+    <script type="application/json">{
+      "service": "map",
+      "version": "3.0",
+      "map": {
+        "background": false,
+        "center": [
+          41.50857729743935,
+          -9.843750000000002
+        ],
+        "zoom": 2,
+        "maxZoom": 6
+      },
+      "layers": {
+        "chorojson": [
+          {
+            "data": {
+              "format": "csv",
+              "source": "https://sbsimo.github.io/webtools/data/regio_performancee.csv",
+              "options": {
+                "decimal": "auto"
+              }
+            },
+            "options": {
+              "ranges": [
+                {
+                  "stop": 0,
+                  "style": "theme_8_25"
+                },
+                {
+                  "stop": 20,
+                  "style": "theme_8_50"
+                },
+                {
+                  "stop": 40,
+                  "style": "theme_8_75"
+                },
+                {
+                  "stop": 60,
+                  "style": "theme_8_100"
+                },
+                {
+                  "stop": 80,
+                  "style": "theme_8_+"
+                },
+                {
+                  "stop": 100,
+                  "style": "theme_8_++"
+                }
+              ],
+              "legend": {
+                "type": "gradient"
+              },
+              "format": {
+                "unit": "%"
+              }
+            }
+          }
+        ]
+      },
+      "sidebar": {
+        "download": [
+          {
+            "name": "regio_performance",
+            "url": "https://sbsimo.github.io/webtools/data/regio_performancee.csv"
+          }
+        ]
+      }
+    }</script>
+
+    <h2 style="text-align:center">Active vegetation per continent within
+        <a href="https://lcviewer.vito.be/2019" target="_blank">land cover class</a>
+    </h2>
+
+    <script type="application/json">{
+      "service": "charts",
+      "version": "2.0",
+      "data": "https://sbsimo.github.io/webtools/data/continent_data.json",
+      "dataset": {
+        "format": "csv",
+        "source": "https://sbsimo.github.io/webtools/data/act_veg_by_cont.csv"
+      }
+    }</script>
+
+    <h2 style="text-align:center">Normal soil-water content - country-level performance</h2>
+
+    <script type="application/json">{
+      "service": "charts",
+      "version": "2.0",
+      "data": {
+        "chart": {
+          "type": "column",
+          "inverted": true
+        },
+        "title": {
+          "text": ""
+        }
+      },
+      "dataset": {
+        "format": "xls",
+        "source": "https://sbsimo.github.io/webtools/data/swi_country_performance.xlsx"
+      }
+    }</script>
+    <br>
+    <p>This dashboard shows the surface of
+    The results displayed here refer to the latest dekadal data (10-days data) available.</p>
+    <p>The average values refer to the same dekad and take into account the entire time series, which starts in 2014.</p>
+    <ul>
+        <li>Get more detailed information on the collection <a href="https://land.copernicus.eu/global/products/fapar" target="_blank">here</a></li>
+        <li>Explore and download the full dataset <a href="https://land.copernicus.vgt.vito.be/PDF/portal/Application.html#Browse;Root=512260;Collection=48403119" target="_blank">here</a></li>
+    </ul>
+
+</body>
+
+</html>
