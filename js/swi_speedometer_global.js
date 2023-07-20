@@ -1,4 +1,4 @@
-Highcharts.chart('speedometer_swi', {
+Highcharts.chart('swi_speedometer_global', {
 
     chart: {
         type: 'gauge',
@@ -6,11 +6,11 @@ Highcharts.chart('speedometer_swi', {
         plotBackgroundImage: null,
         plotBorderWidth: 0,
         plotShadow: false,
-        height: '50%'
+        height: '20%'
     },
 
     title: {
-        text: 'Soil water'
+        text: 'Dekad 11-20 February, 2023'
     },
 
     pane: {
