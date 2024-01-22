@@ -53,74 +53,70 @@
 
     </div>
 
-    <h2 style="text-align:center">Normal soil-water content - world regional performance</h2>
+    <h2 style="text-align:center">Surface of moist soil - country-wide anomaly</h2>
 
     <script type="application/json">{
       "service": "map",
       "version": "3.0",
       "map": {
-        "background": false,
-        "center": [
-          41.50857729743935,
-          -9.843750000000002
+        "background": [
+          "positron_background"
         ],
         "zoom": 2,
-        "maxZoom": 6
+        "maxZoom": 6,
+        "epsg": 3857
       },
       "layers": {
         "chorojson": [
           {
             "data": {
               "format": "csv",
-              "source": "https://sbsimo.github.io/webtools/data/swi_regio_performancee.csv",
+              "source": "https://sbsimo.github.io/webtools/data/swi_country_anomaly.csv",
               "options": {
-                "decimal": "auto"
+                "decimal": "."
               }
             },
             "options": {
               "ranges": [
                 {
                   "stop": 0,
-                  "style": "theme_8_25"
+                  "style": "bicolor_1"
                 },
                 {
                   "stop": 20,
-                  "style": "theme_8_50"
+                  "style": "bicolor_2"
                 },
                 {
                   "stop": 40,
-                  "style": "theme_8_75"
+                  "style": "bicolor_3"
                 },
                 {
                   "stop": 60,
-                  "style": "theme_8_100"
+                  "style": "bicolor_4"
                 },
                 {
                   "stop": 80,
-                  "style": "theme_8_+"
+                  "style": "bicolor_5"
                 },
                 {
                   "stop": 100,
-                  "style": "theme_8_++"
+                  "style": "bicolor_6"
                 }
               ],
               "legend": {
                 "type": "gradient"
               },
               "format": {
-                "unit": "%"
+                "unit": " stddevs",
+                "decimals": 1
               }
             }
           }
         ]
       },
       "sidebar": {
-        "download": [
-          {
-            "name": "regio_performance",
-            "url": "https://sbsimo.github.io/webtools/data/swi_regio_performancee.csv"
-          }
-        ]
+        "home": false,
+        "print": false
       }
     }</script>
 
