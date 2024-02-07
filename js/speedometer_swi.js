@@ -10,12 +10,12 @@ Highcharts.chart('speedometer_swi', {
     },
 
     title: {
-        text: 'Soil water'
+        text: 'Soil Water Index'
     },
 
     pane: {
-        startAngle: -90,
-        endAngle: 89.9,
+        startAngle: -60,
+        endAngle: 60,
         background: null,
         center: ['50%', '75%'],
         size: '100%'
@@ -23,8 +23,8 @@ Highcharts.chart('speedometer_swi', {
 
     // the value axis
     yAxis: {
-        min: 0,
-        max: 100,
+        min: 37.9,
+        max: 46.3,
         tickPixelInterval: 72,
         tickPosition: 'inside',
         tickColor: Highcharts.defaultOptions.chart.backgroundColor || '#FFFFFF',
@@ -38,31 +38,41 @@ Highcharts.chart('speedometer_swi', {
             }
         },
         plotBands: [{
-            from: 0,
-            to: 54.1,
+            from: 37.9, // avg - 3std
+            to: 39.3, // avg - 2std
             color: '#DF5353', //red
             thickness: 20
         }, {
-            from: 54.1,
-            to: 56.3,
+            from: 39.3, // avg - 2std
+            to: 40.7, // avg - 1std
             color: '#DDDF0D', // yellow
             thickness: 20
         }, {
-            from: 56.3,
-            to: 100,
+            from: 40.7, // avg - 1std
+            to: 43.5, // avg + 1std
             color: '#55BF3B', // green
+            thickness: 20
+        }, {
+            from: 43.5, // avg + 1std
+            to: 44.9, // avg + 2std
+            color: '#DDDF0D', // yellow
+            thickness: 20
+        }, {
+            from: 44.9, // avg + 2std
+            to: 46.3, // avg + 3std
+            color: '#DF5353', // red
             thickness: 20
         }]
     },
 
     series: [{
-        name: 'Soil water content',
-        data: [51.5],
+        name: 'Soil Water Index value',
+        data: [46.1],
         tooltip: {
-            valueSuffix: 'normal over % of the global land surface'
+            valueSuffix: ' %'
         },
         dataLabels: {
-            format: 'normal content over {y} % of global land surface',
+            format: 'global average is {y} %',
             borderWidth: 0,
             color: (
                 Highcharts.defaultOptions.title &&
