@@ -14,8 +14,8 @@ Highcharts.chart('speedometer', {
     },
 
     pane: {
-        startAngle: -90,
-        endAngle: 89.9,
+        startAngle: -70,
+        endAngle: 69.9,
         background: null,
         center: ['50%', '75%'],
         size: '100%'
@@ -23,8 +23,8 @@ Highcharts.chart('speedometer', {
 
     // the value axis
     yAxis: {
-        min: 0,
-        max: 100,
+        min: 39.6,
+        max: 63.4,
         tickPixelInterval: 72,
         tickPosition: 'inside',
         tickColor: Highcharts.defaultOptions.chart.backgroundColor || '#FFFFFF',
@@ -38,19 +38,39 @@ Highcharts.chart('speedometer', {
             }
         },
         plotBands: [{
-            from: 0,
-            to: 51.5,
-            color: '#DF5353', //red
+            from: 39.6, // avg - 3.5std
+            to: 41.3, // avg - 3std
+            color: '#fde725', //viridis scale 7 categories -> https://waldyrious.net/viridis-palette-generator/
             thickness: 20
         }, {
-            from: 51.5,
-            to: 54.9,
-            color: '#DDDF0D', // yellow
+            from: 41.3, // avg - 3std
+            to: 44.7, // avg - 2std
+            color: '#90d743',
             thickness: 20
         }, {
-            from: 54.9,
-            to: 100,
-            color: '#55BF3B', // green
+            from: 44.7, // avg - 2std
+            to: 48.1, // avg - 1std
+            color: '#35b779',
+            thickness: 20
+        }, {
+            from: 48.1, // avg - 1std
+            to: 54.9, // avg + 1std
+            color: '#21918c',
+            thickness: 20
+        }, {
+            from: 54.9, // avg + 1std
+            to: 58.3, // avg + 2std
+            color: '#31688e',
+            thickness: 20
+        }, {
+            from: 58.3, // avg + 2std
+            to: 61.7, // avg + 3std
+            color: '#443983',
+            thickness: 20
+        }, {
+            from: 61.7, // avg + 3std
+            to: 63.4, // avg + 3.5std
+            color: '#440154',
             thickness: 20
         }]
     },
