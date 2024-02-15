@@ -1,5 +1,6 @@
-std_anomaly_tropical,2.853404473087121
-std_anomaly_arid,2.657505627499582
-std_anomaly_temperate,2.050711633081925
-std_anomaly_cold,2.0958786465030896
-std_anomaly_polar,0.35161747557934664
+class,std_anomaly_value
+Tropical,2.9
+Arid,2.7
+Temperate,2.1
+Cold,2.1
+Polar,0.4
