@@ -5,9 +5,9 @@ const data = await response.text();
 
 // Parse the .csv data
 const parsedData = Papa.parse(data, { header: true }).data;
-const averages = parsedData.map(row => Number(row.swi_global_weight_average));
-const ranges = parsedData.map(row => [Number(row['avg-1std']), Number(row['avg+1std'])]);
-const seriesMean = parsedData.map(row => Number(row.dekad_avg));
+const averages = parsedData.map(row => Math.round(10*Number(row.swi_global_weight_average))/10);
+const ranges = parsedData.map(row => [Math.round(10*Number(row['avg-1std']))/10, Math.round(10*Number(row['avg+1std']))/10]);
+const seriesMean = parsedData.map(row => Math.round(10*Number(row.dekad_avg))/10);
 
 Highcharts.chart('line-chart-container', {
 

@@ -14,8 +14,8 @@ Highcharts.chart('swi_speedometer_szone', {
     },
 
     pane: {
-        startAngle: -90,
-        endAngle: 89.9,
+        startAngle: -70,
+        endAngle: 69.9,
         background: null,
         center: ['50%', '75%'],
         size: '100%'
@@ -23,8 +23,8 @@ Highcharts.chart('swi_speedometer_szone', {
 
     // the value axis
     yAxis: {
-        min: 0,
-        max: 100,
+        min: 40,
+        max: 90,
         tickPixelInterval: 72,
         tickPosition: 'inside',
         tickColor: Highcharts.defaultOptions.chart.backgroundColor || '#FFFFFF',
@@ -40,29 +40,29 @@ Highcharts.chart('swi_speedometer_szone', {
         plotBands: [{
             from: 0,
             to: 80.8,
-            color: '#DF5353', //red
+            color: '#90d743',
             thickness: 20
         }, {
             from: 80.8,
             to: 86.0,
-            color: '#DDDF0D', // yellow
+            color: '#35b779',
             thickness: 20
         }, {
             from: 86.0,
             to: 100,
-            color: '#55BF3B', // green
+            color: '#21918c', // mid-value viridis
             thickness: 20
         }]
     },
 
     series: [{
-        name: 'Soil water content',
+        name: 'Average value',
         data: [80.7],
         tooltip: {
-            valueSuffix: 'normal over % of the global land surface'
+            valueSuffix: ' %'
         },
         dataLabels: {
-            format: 'normal content over {y} % of global land surface',
+            format: 'average is {y} %',
             borderWidth: 0,
             color: (
                 Highcharts.defaultOptions.title &&

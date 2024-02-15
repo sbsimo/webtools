@@ -14,8 +14,8 @@ Highcharts.chart('swi_speedometer_nzone', {
     },
 
     pane: {
-        startAngle: -90,
-        endAngle: 89.9,
+        startAngle: -70,
+        endAngle: 70,
         background: null,
         center: ['50%', '75%'],
         size: '100%'
@@ -23,8 +23,8 @@ Highcharts.chart('swi_speedometer_nzone', {
 
     // the value axis
     yAxis: {
-        min: 0,
-        max: 100,
+        min: 45.0,
+        max: 55.2,
         tickPixelInterval: 72,
         tickPosition: 'inside',
         tickColor: Highcharts.defaultOptions.chart.backgroundColor || '#FFFFFF',
@@ -38,31 +38,51 @@ Highcharts.chart('swi_speedometer_nzone', {
             }
         },
         plotBands: [{
-            from: 0,
-            to: 30.8,
-            color: '#DF5353', //red
+            from: 45.0, // avg - 3.5std
+            to: 45.7, // avg - 3std
+            color: '#fde725', //viridis scale 7 categories -> https://waldyrious.net/viridis-palette-generator/
             thickness: 20
         }, {
-            from: 30.8,
-            to: 32.9,
-            color: '#DDDF0D', // yellow
+            from: 45.7, // avg - 3std
+            to: 47.2, // avg - 2std
+            color: '#90d743',
             thickness: 20
         }, {
-            from: 32.9,
-            to: 100,
-            color: '#55BF3B', // green
+            from: 47.2, // avg - 2std
+            to: 48.6, // avg - 1std
+            color: '#35b779',
+            thickness: 20
+        }, {
+            from: 48.6, // avg - 1std
+            to: 51.6, // avg + 1std
+            color: '#21918c',
+            thickness: 20
+        }, {
+            from: 51.6, // avg + 1std
+            to: 53.0, // avg + 2std
+            color: '#31688e',
+            thickness: 20
+        }, {
+            from: 53.0, // avg + 2std
+            to: 54.5, // avg + 3std
+            color: '#443983',
+            thickness: 20
+        }, {
+            from: 54.5, // avg + 3std
+            to: 55.2, // avg + 3.5std
+            color: '#440154',
             thickness: 20
         }]
     },
 
     series: [{
-        name: 'Soil water content',
-        data: [32.3],
+        name: 'Average value',
+        data: [53.4],
         tooltip: {
-            valueSuffix: 'normal over % of the global land surface'
+            valueSuffix: ' %'
         },
         dataLabels: {
-            format: 'normal content over {y} % of global land surface',
+            format: 'average is {y} %',
             borderWidth: 0,
             color: (
                 Highcharts.defaultOptions.title &&
