@@ -214,8 +214,10 @@
             "background": [
               "positron_background"
             ],
+            "center": [18, 8],
             "zoom": 2,
-            "maxZoom": 6,
+            "minZoom": 2,
+            "maxZoom": 5,
             "epsg": 3857
           },
           "layers": {
@@ -231,36 +233,57 @@
                 "options": {
                   "ranges": [
                     {
-                      "stop": 0,
-                      "style": "bicolor_1"
+                      "color": "#fde725",
+                      "from": -3.5,
+                      "to": -3,
+                      "legend": "-3.5 to -3"
                     },
                     {
-                      "stop": 20,
-                      "style": "bicolor_2"
+                      "color": "#90d743",
+                      "from": -3,
+                      "to": -2,
+                      "legend": "-3 to -2"
                     },
                     {
-                      "stop": 40,
-                      "style": "bicolor_3"
+                      "color": "#35b779",
+                      "from": -2,
+                      "to": -1,
+                      "legend": "-2 to -1"
                     },
                     {
-                      "stop": 60,
-                      "style": "bicolor_4"
+                      "color": "#21918c",
+                      "from": -1,
+                      "to": 1,
+                      "legend": "-1 to +1"
                     },
                     {
-                      "stop": 80,
-                      "style": "bicolor_5"
+                      "color": "#31688e",
+                      "from": 1,
+                      "to": 2,
+                      "legend": "+1 to +2"
                     },
                     {
-                      "stop": 100,
-                      "style": "bicolor_6"
+                      "color": "#443983",
+                      "from": 2,
+                      "to": 3,
+                      "legend": "+2 to +3"
+                                          },
+                    {
+                      "color": "#440154",
+                      "from": 3,
+                      "to": 3.5,
+                      "legend": "+3 to +3.5"
                     }
                   ],
                   "legend": {
-                    "type": "gradient"
+                    "type": "list"
                   },
                   "format": {
-                    "unit": " stddevs",
-                    "decimals": 1
+                    "unit": " ",
+                    "decimals": 1,
+                    "separator": {
+                      "decimals": "."
+                    }
                   }
                 }
               }
@@ -322,6 +345,21 @@
         <li>Get more detailed information on the CLMS Global SWI10 0.1 degree collection <a href="https://land.copernicus.eu/en/products/soil-moisture/10-daily-soil-water-index-global-v3-0-12-5-km" target="_blank">here</a></li>
         <li>Explore and download the full dataset <a href="https://land.copernicus.vgt.vito.be/PDF/portal/Application.html#Browse;Root=514690;Collection=735733" target="_blank">here</a></li>
     </ul>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <br>
     <br>
     <br>
