@@ -23,8 +23,8 @@ Highcharts.chart('swi_speedometer_szone', {
 
     // the value axis
     yAxis: {
-        min: 40,
-        max: 90,
+        min: 16.0,
+        max: 37.5,
         tickPixelInterval: 72,
         tickPosition: 'inside',
         tickColor: Highcharts.defaultOptions.chart.backgroundColor || '#FFFFFF',
@@ -38,26 +38,46 @@ Highcharts.chart('swi_speedometer_szone', {
             }
         },
         plotBands: [{
-            from: 0,
-            to: 80.8,
+            from: 16.0, // avg - 3.5std
+            to: 17.5, // avg - 3std
+            color: '#fde725', //viridis scale 7 categories -> https://waldyrious.net/viridis-palette-generator/
+            thickness: 20
+        }, {
+            from: 17.5, // avg - 3std
+            to: 20.6, // avg - 2std
             color: '#90d743',
             thickness: 20
         }, {
-            from: 80.8,
-            to: 86.0,
+            from: 20.6, // avg - 2std
+            to: 23.7, // avg - 1std
             color: '#35b779',
             thickness: 20
         }, {
-            from: 86.0,
-            to: 100,
-            color: '#21918c', // mid-value viridis
+            from: 23.7, // avg - 1std
+            to: 29.8, // avg + 1std
+            color: '#21918c',
+            thickness: 20
+        }, {
+            from: 29.8, // avg + 1std
+            to: 32.9, // avg + 2std
+            color: '#31688e',
+            thickness: 20
+        }, {
+            from: 32.9, // avg + 2std
+            to: 35.9, // avg + 3std
+            color: '#443983',
+            thickness: 20
+        }, {
+            from: 35.9, // avg + 3std
+            to: 37.5, // avg + 3.5std
+            color: '#440154',
             thickness: 20
         }]
     },
 
     series: [{
         name: 'Average value',
-        data: [80.7],
+        data: [30.0],
         tooltip: {
             valueSuffix: ' %'
         },
