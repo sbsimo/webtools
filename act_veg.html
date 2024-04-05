@@ -174,32 +174,32 @@
 
     <div class="row mb-3 text-center">
       <div class="col-xl-4 themed-grid-col">
-        <div id="swi_speedometer_nzone"></div>
+        <div id="lai_speedometer_nzone"></div>
         <script type="application/json">{
           "service": "charts",
           "version": "2.0",
           "custom": [
-            "js/swi_speedometer_nzone.js"
+            "js/lai_speedometer_nzone.js"
           ]
         }</script>
       </div>
       <div class="col-xl-4 themed-grid-col">
-       <div id="swi_speedometer_tropics">
+       <div id="lai_speedometer_tropics">
        </div><script type="application/json">{
         "service": "charts",
         "version": "2.0",
         "custom": [
-            "js/swi_speedometer_tropics.js"
+            "js/lai_speedometer_tropics.js"
         ]
         }</script>
       </div>
       <div class="col-xl-4 themed-grid-col">
-        <div id="swi_speedometer_szone">
+        <div id="lai_speedometer_szone">
         </div><script type="application/json">{
           "service": "charts",
           "version": "2.0",
           "custom": [
-            "js/swi_speedometer_szone.js"
+            "js/lai_speedometer_szone.js"
           ]
         }</script>
       </div>
@@ -225,7 +225,7 @@
               {
                 "data": {
                   "format": "csv",
-                  "source": "https://sbsimo.github.io/webtools/data/swi_country_anomaly.csv",
+                  "source": "https://sbsimo.github.io/webtools/data/lai_country_anomaly.csv",
                   "options": {
                     "decimal": "."
                   }
@@ -346,11 +346,11 @@
     </div>
 
     <br>
-    <p class="lead">This dashboard shows the average values and anomalies of soil moisture in plant root zone, extracted on the CLMS 10-day Global Soil Water Index (SWI10 with T = 10). The results displayed here refer to the dekadal date indicated above.</p>
-    <p>Anomalies are calculated with reference to the long term average for the same dekad; the time series starts in 2007.</p>
+    <p class="lead">This dashboard shows the average values and anomalies of leaf density in plant canopies, extracted on the CLMS Leaf Area Index (LAI). The results displayed here refer to the period indicated above.</p>
+    <p>Anomalies are calculated with reference to the long term average for the same yearly period; the time series starts in 2014.</p>
     <ul>
-        <li>Get more detailed information on the CLMS Global SWI10 0.1 degree collection <a href="https://land.copernicus.eu/en/products/soil-moisture/10-daily-soil-water-index-global-v3-0-12-5-km" target="_blank">here</a></li>
-        <li>Explore and download the full dataset <a href="https://land.copernicus.vgt.vito.be/PDF/portal/Application.html#Browse;Root=514690;Collection=735733" target="_blank">here</a></li>
+        <li>Get more detailed information on the CLMS Global LAI 300m collection <a href="https://land.copernicus.eu/en/products/vegetation/leaf-area-index-300m-v1.0" target="_blank">here</a></li>
+        <li>Explore and download the full dataset <a href="https://land.copernicus.vgt.vito.be/PDF/portal/Application.html#Browse;Root=512260;Collection=1000062;Time=NORMAL,NORMAL,-1,,,-1,," target="_blank">here</a></li>
     </ul>
 </main>
 <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
