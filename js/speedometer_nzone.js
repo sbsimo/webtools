@@ -1,5 +1,4 @@
 Highcharts.chart('speedometer_nzone', {
-
     chart: {
         type: 'gauge',
         plotBackgroundColor: null,
@@ -9,6 +8,22 @@ Highcharts.chart('speedometer_nzone', {
         height: '50%'
     },
 
+    plotOptions: {
+        series: {
+            animation: {
+                duration: 1550
+            }
+        }
+    },
+
+    title: {
+        text: 'LAI global average',
+        align: 'center',
+        style: {
+            color: '#a0b128',
+            fontSize: '1.5rem'
+        }
+    },
     title: {
         text: 'Northern zone'
     },
@@ -34,7 +49,8 @@ Highcharts.chart('speedometer_nzone', {
         labels: {
             distance: 20,
             style: {
-                fontSize: '10px'
+                fontSize: '1rem',
+                color: '#a0b128'
             }
         },
         plotBands: [{
@@ -61,16 +77,23 @@ Highcharts.chart('speedometer_nzone', {
         tooltip: {
             valueSuffix: ' % of the northern-zone surface'
         },
+
         dataLabels: {
-            format: 'Active vegetation covers {y} % of northern-zone surface',
+            // format: 'Active vegetation covers {y} % of northern-zone surface',
+
+            useHTML: true,
+            formatter: function () {
+                // Use this function to return the HTML content for the label
+                return '<div class="gauge_dlabel"><span>Average is</span><span class="val">' + this.y + '</span></div>'
+            },
             borderWidth: 0,
             color: (
                 Highcharts.defaultOptions.title &&
                 Highcharts.defaultOptions.title.style &&
                 Highcharts.defaultOptions.title.style.color
-            ) || '#333333',
+            ) || '#a0b128',
             style: {
-                fontSize: '10px'
+                fontSize: '1rem'
             }
         },
         dial: {
