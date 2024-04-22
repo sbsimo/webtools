@@ -8,7 +8,13 @@ Highcharts.chart('lai_speedometer_szone', {
         plotShadow: false,
         height: '50%'
     },
-
+    plotOptions: {
+        series: {
+            animation: {
+                duration: 1550
+            }
+        }
+    },
     title: {
         text: 'Southern zone - TODO'
     },
@@ -82,16 +88,21 @@ Highcharts.chart('lai_speedometer_szone', {
             valueSuffix: ' '
         },
         dataLabels: {
-            format: 'average is {y}',
+
             borderWidth: 0,
             color: (
                 Highcharts.defaultOptions.title &&
                 Highcharts.defaultOptions.title.style &&
                 Highcharts.defaultOptions.title.style.color
-            ) || '#333333',
+            ) || '#a0b128',
             style: {
-                fontSize: '10px'
-            }
+                fontSize: '1rem'
+            },
+            useHTML: true,
+            formatter: function () {
+                // Use this function to return the HTML content for the label
+                return '<div class="gauge_dlabel"><span>Average is</span><span class="val">' + this.y + '</span></div>'
+            },
         },
         dial: {
             radius: '80%',
