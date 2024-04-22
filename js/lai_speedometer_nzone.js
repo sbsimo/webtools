@@ -8,7 +8,13 @@ Highcharts.chart('lai_speedometer_nzone', {
         plotShadow: false,
         height: '50%'
     },
-
+    plotOptions: {
+        series: {
+            animation: {
+                duration: 1550
+            }
+        }
+    },
     title: {
         text: 'Northern zone'
     },
@@ -82,7 +88,15 @@ Highcharts.chart('lai_speedometer_nzone', {
             valueSuffix: ' '
         },
         dataLabels: {
-            format: 'average is {y}',
+
+            useHTML: true,
+            formatter: function () {
+                // Use this function to return the HTML content for the label
+                return '<div class="gauge_dlabel"><span>Average is</span><span class="val">' + this.y + '</span></div>'
+            },
+
+            //format: 'average is <h2>{y}</h2>',
+
             borderWidth: 0,
             color: (
                 Highcharts.defaultOptions.title &&
@@ -90,7 +104,7 @@ Highcharts.chart('lai_speedometer_nzone', {
                 Highcharts.defaultOptions.title.style.color
             ) || '#333333',
             style: {
-                fontSize: '10px'
+                fontSize: '1rem'
             }
         },
         dial: {
