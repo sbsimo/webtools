@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="./app_css/main.css" rel="stylesheet">
  <title>TerraMeter</title>
 </head>
 
@@ -17,13 +18,15 @@
     style="
       background-image: url('img/huge.jfif');
 			background-size: 100%;
-      height: 260px;
-      margin-top: 58px;
+      height: 160px;
+      margin-top: 10px;
+      color:#a0b128
+
     "
   >
     <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
       <div class="d-flex justify-content-center align-items-center h-100">
-        <div class="text-white">
+        <div class="">
           <h1 class="mb-3">TerraMeter</h1>
             <h3>Current State of Land</h3>
         </div>
@@ -32,10 +35,13 @@
   </div>
 
 	</header>
-<hr/>
 
-<div style="display:flex">
-    <div title="Current value of Leaf Area Index" style="flex:1">
+<main>
+<div style="" class="container">
+
+  <div class="row mb-3 text-center">
+    <div class="col-6">
+
         <div id="speedometer_lai"></div><script type="application/json">{
             "service": "charts",
             "version": "2.0",
@@ -43,33 +49,48 @@
                 "js/speedometer_lai.js"
             ]
         }</script>
-        <p style="text-align:center">valid for Oct-Nov, 2023</p>
-        <a href="act_veg.html" target="_blank">
-            <img src="img/plants-icon-14.jpg" height="45" style="display:block;margin-left:auto;margin-right:auto;">
-        </a>
+
+
+
+        <div style="text-align:center">
+          <div>valid for Oct-Nov, 2023</div>
+          <button type="button" class="btn btn-dark">
+            <a href="act_veg.html" target="_blank">
+              Explore more
+            </a>
+          </button>
+        </div>
     </div>
 
-  <div title="Current value of Soil Water Index, band SWI_010" style="flex:1">
-    <div id="speedometer_swi"></div><script type="application/json">{
-	  "service": "charts",
-	  "version": "2.0",
-	  "custom": [
-	    	"js/speedometer_swi.js"
-	  ]
-    }</script>
-    <p style="text-align:center">valid for the 3rd dekad of July, 2023</p>
-    <a href="soil_water.html" target="_blank">
-      <img src="img/soil-water_icon.png" height="55" style="display:block;margin-left:auto;margin-right:auto;">
-    </a>
+    <div class="col-6">
+      <div id="speedometer_swi"></div><script type="application/json">{
+      "service": "charts",
+      "version": "2.0",
+      "custom": [
+          "js/speedometer_swi.js"
+      ]
+      }</script>
+      <div style="text-align:center">
+        <div>valid for the 3rd dekad of July, 2023</div>
+        <button type="button" class="btn btn-dark">
+          <a href="soil_water.html" target="_blank">
+            Explore more
+          </a>
+        </button>
+      </div>
+    </div>
   </div>
+
+
+
 </div>
-  <br>
+
 <section class="">
-  <footer class="text-center text-white" style="background-color: #0a4275;">
+  <footer class="text-center" style="background-color: #ebefc6;color:#5e5151">
     <div class="container p-4 pb-0">
       <section class="">
         <p class="d-flex justify-content-center align-items-center">
-					<p class="text-white">The Copernicus Global Land Service (CGLS) is a component of the Land Monitoring Core Service (LMCS) of Copernicus,
+					<p class="">The Copernicus Global Land Service (CGLS) is a component of the Land Monitoring Core Service (LMCS) of Copernicus,
 		  the European flagship programme on Earth Observation. The Global Land Service systematically produces a series of qualified bio-geophysical
 		  products on the status and evolution of the land surface, at global scale and at mid to low spatial resolution,
 		  complemented by the constitution of long term time series. The products are used to monitor the vegetation, the water cycle,
@@ -81,5 +102,6 @@
 
   </footer>
 </section>
+</main>
  </body>
  </html>
