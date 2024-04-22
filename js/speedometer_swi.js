@@ -8,9 +8,16 @@ Highcharts.chart('speedometer_swi', {
         plotShadow: false,
         height: '50%'
     },
-
+    plotOptions: {
+        series: {
+            animation: {
+                duration: 1550
+            }
+        }
+    },
     title: {
-        text: 'Soil Moisture in plant root zone'
+        text: 'Soil Moisture in plant root zone',
+
     },
 
     pane: {
@@ -82,15 +89,20 @@ Highcharts.chart('speedometer_swi', {
             valueSuffix: ' %'
         },
         dataLabels: {
-            format: 'global average is {y} %',
+            // format: 'global average is {y} %',
+            useHTML: true,
+            formatter: function () {
+                // Use this function to return the HTML content for the label
+                return '<div class="gauge_dlabel"><span>Average is</span><span class="val">' + this.y + '</span></div>'
+            },
             borderWidth: 0,
             color: (
                 Highcharts.defaultOptions.title &&
                 Highcharts.defaultOptions.title.style &&
                 Highcharts.defaultOptions.title.style.color
-            ) || '#333333',
+            ) || '#a0b128',
             style: {
-                fontSize: '10px'
+                fontSize: '1rem'
             }
         },
         dial: {
