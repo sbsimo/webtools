@@ -8,7 +8,13 @@ Highcharts.chart('lai_speedometer_tropics', {
         plotShadow: false,
         height: '50%'
     },
-
+    plotOptions: {
+        series: {
+            animation: {
+                duration: 1550
+            }
+        }
+    },
     title: {
         text: 'Tropical zone - TODO'
     },
@@ -23,7 +29,8 @@ Highcharts.chart('lai_speedometer_tropics', {
 
     // the value axis
     yAxis: {
-        min: 0.560,
+        //min: 0.560,
+        min: 0.549,
         max: 0.604,
         tickPixelInterval: 72,
         tickPosition: 'inside',
@@ -38,7 +45,8 @@ Highcharts.chart('lai_speedometer_tropics', {
             }
         },
         plotBands: [{
-            from: 0.560, // avg - 3.5std
+            //from: 0.560, // avg - 3.5std
+            from: 0.549, // avg - 3.5std
             to: 0.563, // avg - 3std
             color: '#fde725', //viridis scale 7 categories -> https://waldyrious.net/viridis-palette-generator/
             thickness: 20
@@ -82,7 +90,11 @@ Highcharts.chart('lai_speedometer_tropics', {
             valueSuffix: ' '
         },
         dataLabels: {
-            format: 'average is {y}',
+            useHTML: true,
+            formatter: function () {
+                // Use this function to return the HTML content for the label
+                return '<div class="gauge_dlabel"><span>Average is</span><span class="val">' + this.y + '</span></div>'
+            },
             borderWidth: 0,
             color: (
                 Highcharts.defaultOptions.title &&
@@ -90,7 +102,7 @@ Highcharts.chart('lai_speedometer_tropics', {
                 Highcharts.defaultOptions.title.style.color
             ) || '#333333',
             style: {
-                fontSize: '10px'
+                fontSize: '1rem'
             }
         },
         dial: {
