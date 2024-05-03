@@ -5,9 +5,9 @@ const data = await response.text();
 
 // Parse the .csv data
 const parsedData = Papa.parse(data, { header: true }).data;
-const averages = parsedData.map(row => Math.round(10*Number(row.swi_global_weight_average))/10);
+const averages = parsedData.map(row => Math.round(10*Number(row['swi010']))/10);
 const ranges = parsedData.map(row => [Math.round(10*Number(row['avg-1std']))/10, Math.round(10*Number(row['avg+1std']))/10]);
-const seriesMean = parsedData.map(row => Math.round(10*Number(row.dekad_avg))/10);
+const seriesMean = parsedData.map(row => Math.round(10*Number(row.clim_avg))/10);
 
 Highcharts.chart('line-chart-container', {
 
@@ -25,7 +25,7 @@ Highcharts.chart('line-chart-container', {
 
     xAxis: {
 //        type: 'datetime',
-        categories: parsedData.map(row => row.datetime.substring(0, 4))
+        categories: parsedData.map(row => row.winter.substring(0, 4))
 //        accessibility: {
 //            rangeDescription: 'Range: Jul 1st 2022 to Jul 31st 2022.'
 //        }
