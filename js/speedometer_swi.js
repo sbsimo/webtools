@@ -1,3 +1,52 @@
+
+function alignLabel() {
+    var chart = this;
+
+    var newX = chart.plotWidth / 2 + chart.plotLeft,
+        newY = chart.plotHeight / 2 + chart.plotTop;
+    console.log(newX, newY, chart.plotLeft, chart.plotTop)
+    //400 216 10 47
+
+    console.info(chart.plotHeight, chart.plotTop)
+    //338 47 ==>c 338/2 = 169
+    console.warn(chart.plotBox)
+    /*
+    {
+"x": 10,
+"y": 47,
+"width": 780,
+"height": 338
+}
+    */
+    //.highcharts-axis-labels 328px
+    //40  ==> x=305
+    //800
+    //330 /2 = 165
+
+
+    var addText = function (text, posX, posY) {
+        return chart.renderer.text(text, newX + posX, newY + posY)
+            .attr({
+                align: 'center',
+                zIndex: 100,
+                rotation: 0
+            })
+            .css({
+                color: '#4572A7',
+                fontSize: '9pt',
+            })
+            .add();
+    }
+
+    addText('Standard behaviour', 0, -90);
+    addText('Unusually low', -120, 40);
+    addText('Unusually high', 120, 40);
+
+    /* if (addText) {
+        addText.destroy();
+}
+*/
+}
 Highcharts.chart('speedometer_swi', {
 
     chart: {
@@ -6,7 +55,11 @@ Highcharts.chart('speedometer_swi', {
         plotBackgroundImage: null,
         plotBorderWidth: 0,
         plotShadow: false,
-        height: '50%'
+        height: '50%',
+        events: {
+            load: alignLabel,
+            redraw: alignLabel
+        },
     },
     plotOptions: {
         series: {
