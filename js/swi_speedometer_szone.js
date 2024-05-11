@@ -23,8 +23,8 @@ Highcharts.chart('swi_speedometer_szone', {
 
     // the value axis
     yAxis: {
-        min: 16.0,
-        max: 37.5,
+        min: 17.8,
+        max: 37.1,
         tickPixelInterval: 72,
         tickPosition: 'inside',
         tickColor: Highcharts.defaultOptions.chart.backgroundColor || '#FFFFFF',
@@ -38,38 +38,38 @@ Highcharts.chart('swi_speedometer_szone', {
             }
         },
         plotBands: [{
-            from: 16.0, // avg - 3.5std
-            to: 17.5, // avg - 3std
+            from: 17.8, // avg - 3.5std
+            to: 19.2, // avg - 3std
             color: '#fde725', //viridis scale 7 categories -> https://waldyrious.net/viridis-palette-generator/
             thickness: 20
         }, {
-            from: 17.5, // avg - 3std
-            to: 20.6, // avg - 2std
+            from: 19.2, // avg - 3std
+            to: 22.0, // avg - 2std
             color: '#90d743',
             thickness: 20
         }, {
-            from: 20.6, // avg - 2std
-            to: 23.7, // avg - 1std
+            from: 22.0, // avg - 2std
+            to: 24.7, // avg - 1std
             color: '#35b779',
             thickness: 20
         }, {
-            from: 23.7, // avg - 1std
-            to: 29.8, // avg + 1std
+            from: 24.7, // avg - 1std
+            to: 30.2, // avg + 1std
             color: '#21918c',
             thickness: 20
         }, {
-            from: 29.8, // avg + 1std
-            to: 32.9, // avg + 2std
+            from: 30.2, // avg + 1std
+            to: 33.0, // avg + 2std
             color: '#31688e',
             thickness: 20
         }, {
-            from: 32.9, // avg + 2std
-            to: 35.9, // avg + 3std
+            from: 33.0, // avg + 2std
+            to: 35.7, // avg + 3std
             color: '#443983',
             thickness: 20
         }, {
-            from: 35.9, // avg + 3std
-            to: 37.5, // avg + 3.5std
+            from: 35.7, // avg + 3std
+            to: 37.1, // avg + 3.5std
             color: '#440154',
             thickness: 20
         }]
@@ -77,7 +77,7 @@ Highcharts.chart('swi_speedometer_szone', {
 
     series: [{
         name: 'Average value',
-        data: [30.0],
+        data: [27.5],
         tooltip: {
             valueSuffix: ' %'
         },

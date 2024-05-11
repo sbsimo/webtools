@@ -23,8 +23,8 @@ Highcharts.chart('swi_speedometer_tropics', {
 
     // the value axis
     yAxis: {
-        min: 28.4,
-        max: 39.3,
+        min: 27.7,
+        max: 39.7,
         tickPixelInterval: 72,
         tickPosition: 'inside',
         tickColor: Highcharts.defaultOptions.chart.backgroundColor || '#FFFFFF',
@@ -38,38 +38,38 @@ Highcharts.chart('swi_speedometer_tropics', {
             }
         },
         plotBands: [{
-            from: 28.4, // avg - 3.5std
-            to: 29.2, // avg - 3std
+            from: 27.7, // avg - 3.5std
+            to: 28.5, // avg - 3std
             color: '#fde725', //viridis scale 7 categories -> https://waldyrious.net/viridis-palette-generator/
             thickness: 20
         }, {
-            from: 29.2, // avg - 3std
-            to: 30.7, // avg - 2std
+            from: 28.5, // avg - 3std
+            to: 30.2, // avg - 2std
             color: '#90d743',
             thickness: 20
         }, {
-            from: 30.7, // avg - 2std
-            to: 32.3, // avg - 1std
+            from: 30.2, // avg - 2std
+            to: 32.0, // avg - 1std
             color: '#35b779',
             thickness: 20
         }, {
-            from: 32.3, // avg - 1std
+            from: 32.0, // avg - 1std
             to: 35.4, // avg + 1std
             color: '#21918c',
             thickness: 20
         }, {
             from: 35.4, // avg + 1std
-            to: 37.0, // avg + 2std
+            to: 37.1, // avg + 2std
             color: '#31688e',
             thickness: 20
         }, {
-            from: 37.0, // avg + 2std
-            to: 38.5, // avg + 3std
+            from: 37.1, // avg + 2std
+            to: 38.9, // avg + 3std
             color: '#443983',
             thickness: 20
         }, {
-            from: 38.5, // avg + 3std
-            to: 39.3, // avg + 3.5std
+            from: 38.9, // avg + 3std
+            to: 39.7, // avg + 3.5std
             color: '#440154',
             thickness: 20
         }]
@@ -77,7 +77,7 @@ Highcharts.chart('swi_speedometer_tropics', {
 
     series: [{
         name: 'Average value',
-        data: [38.9],
+        data: [39.0],
         tooltip: {
             valueSuffix: ' %'
         },
