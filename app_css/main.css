@@ -45,7 +45,7 @@ color: #a0b128!important;
 rect.highcharts-background,
 .highcharts-legend rect {
 
-    fill: hsl(0, 0%, 100%)!important;
+    fill: #00000000 !important;
 }
 
 .highcharts text {
@@ -209,19 +209,24 @@ main .chorojson-legend-container{
     font-size: 1rem;
     grid-column-gap: 5px;
     color: #7f7878;
+    margin-right: 5px;
     /* outline: 1px solid gray; */
 }
 .legend .symbol {
-    width: .8rem;
-    height: .8rem;
+    width: 1.2rem;
+    height: 1rem;
     /* width: 15px; */
     /* height: 15px; */
 }
 .legendContainer
 {
-    width: 40%;
+    width: 44%;
     margin-left: 30%;
     padding: 12px;
-    border: 1px solid #877d7d40;
-    background: #e0d8d8;
+    /* border: 1px solid #877d7d40; */
+    /* background: #e1d8d84f; */
+}
+.lowChartsContainer {
+    background-color: #e1d8d84f;
+    padding: 10px;
 }
