@@ -1,6 +1,6 @@
 class,std_anomaly_value
-Tropical,2.9
+Tropical,2.6
 Arid,2.7
-Temperate,2.1
-Cold,2.1
-Polar,0.4
+Temperate,2.5
+Cold,3.1
+Polar,0.9
