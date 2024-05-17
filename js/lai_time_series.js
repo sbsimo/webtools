@@ -5,11 +5,11 @@ async function generateLineChart() {
 
     // Parse the .csv data
     const parsedData = Papa.parse(data, { header: true }).data;
-    const averages = parsedData.map(row => Math.round(100 * Number(row.corr_wavg)) / 100);
-    const ranges = parsedData.map(row => [Math.round(100 * Number(row['avg-1std'])) / 100, Math.round(100 * Number(row['avg+1std'])) / 100]);
-    const seriesMean = parsedData.map(row => Math.round(100 * Number(row.pre21_mean)) / 100);
+    const averages = parsedData.map(row => Math.round(1000 * Number(row.corr_wavg)) / 1000);
+    const ranges = parsedData.map(row => [Math.round(1000 * Number(row['avg-1std'])) / 1000, Math.round(1000 * Number(row['avg+1std'])) / 1000]);
+    const seriesMean = parsedData.map(row => Math.round(1000 * Number(row.clim_avg)) / 1000);
 
-    var s = parsedData.map(row => row.year.substring(0, 4))
+    var s = parsedData.map(row => row.winter.substring(0, 4))
     /* s.pop();
     console.log(s) */
 
@@ -44,7 +44,7 @@ async function generateLineChart() {
 
             //        type: 'datetime',
             //categories: s.map(d => +d),
-            categories: parsedData.map(row => row.year.substring(0, 4)),
+            categories: s,
             labels: {
                 style: {
                     color: '#074007',
