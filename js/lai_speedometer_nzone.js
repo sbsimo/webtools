@@ -29,8 +29,8 @@ Highcharts.chart('lai_speedometer_nzone', {
 
     // the value axis
     yAxis: {
-        min: 0.560,
-        max: 0.604,
+        min: 0.385,
+        max: 0.520,
         tickPixelInterval: 72,
         tickPosition: 'inside',
         tickColor: Highcharts.defaultOptions.chart.backgroundColor || '#FFFFFF',
@@ -44,38 +44,38 @@ Highcharts.chart('lai_speedometer_nzone', {
             }
         },
         plotBands: [{
-            from: 0.560, // avg - 3.5std
-            to: 0.563, // avg - 3std
+            from: 0.385, // avg - 3.5std
+            to: 0.395, // avg - 3std
             color: '#fde725', //viridis scale 7 categories -> https://waldyrious.net/viridis-palette-generator/
             thickness: 20
         }, {
-            from: 0.563, // avg - 3std
-            to: 0.569, // avg - 2std
+            from: 0.395, // avg - 3std
+            to: 0.414, // avg - 2std
             color: '#90d743',
             thickness: 20
         }, {
-            from: 0.569, // avg - 2std
-            to: 0.575, // avg - 1std
+            from: 0.414, // avg - 2std
+            to: 0.433, // avg - 1std
             color: '#35b779',
             thickness: 20
         }, {
-            from: 0.575, // avg - 1std
-            to: 0.588, // avg + 1std
+            from: 0.433, // avg - 1std
+            to: 0.472, // avg + 1std
             color: '#21918c',
             thickness: 20
         }, {
-            from: 0.588, // avg + 1std
-            to: 0.595, // avg + 2std
+            from: 0.472, // avg + 1std
+            to: 0.491, // avg + 2std
             color: '#31688e',
             thickness: 20
         }, {
-            from: 0.595, // avg + 2std
-            to: 0.601, // avg + 3std
+            from: 0.491, // avg + 2std
+            to: 0.510, // avg + 3std
             color: '#443983',
             thickness: 20
         }, {
-            from: 0.601, // avg + 3std
-            to: 0.604, // avg + 3.5std
+            from: 0.510, // avg + 3std
+            to: 0.520, // avg + 3.5std
             color: '#440154',
             thickness: 20
         }]
@@ -83,7 +83,7 @@ Highcharts.chart('lai_speedometer_nzone', {
 
     series: [{
         name: 'Average value',
-        data: [0.577],
+        data: [0.472],
         tooltip: {
             valueSuffix: ' '
         },

@@ -16,7 +16,7 @@ Highcharts.chart('lai_speedometer_tropics', {
         }
     },
     title: {
-        text: 'Tropical zone - TODO'
+        text: 'Tropical zone'
     },
 
     pane: {
@@ -29,9 +29,8 @@ Highcharts.chart('lai_speedometer_tropics', {
 
     // the value axis
     yAxis: {
-        //min: 0.560,
-        min: 0.549,
-        max: 0.604,
+        min: 2.033,
+        max: 2.476,
         tickPixelInterval: 72,
         tickPosition: 'inside',
         tickColor: Highcharts.defaultOptions.chart.backgroundColor || '#FFFFFF',
@@ -45,39 +44,38 @@ Highcharts.chart('lai_speedometer_tropics', {
             }
         },
         plotBands: [{
-            //from: 0.560, // avg - 3.5std
-            from: 0.549, // avg - 3.5std
-            to: 0.563, // avg - 3std
+            from: 2.033, // avg - 3.5std
+            to: 2.065, // avg - 3std
             color: '#fde725', //viridis scale 7 categories -> https://waldyrious.net/viridis-palette-generator/
             thickness: 20
         }, {
-            from: 0.563, // avg - 3std
-            to: 0.569, // avg - 2std
+            from: 2.065, // avg - 3std
+            to: 2.128, // avg - 2std
             color: '#90d743',
             thickness: 20
         }, {
-            from: 0.569, // avg - 2std
-            to: 0.575, // avg - 1std
+            from: 2.128, // avg - 2std
+            to: 2.192, // avg - 1std
             color: '#35b779',
             thickness: 20
         }, {
-            from: 0.575, // avg - 1std
-            to: 0.588, // avg + 1std
+            from: 2.192, // avg - 1std
+            to: 2.318, // avg + 1std
             color: '#21918c',
             thickness: 20
         }, {
-            from: 0.588, // avg + 1std
-            to: 0.595, // avg + 2std
+            from: 2.318, // avg + 1std
+            to: 2.382, // avg + 2std
             color: '#31688e',
             thickness: 20
         }, {
-            from: 0.595, // avg + 2std
-            to: 0.601, // avg + 3std
+            from: 2.382, // avg + 2std
+            to: 2.445, // avg + 3std
             color: '#443983',
             thickness: 20
         }, {
-            from: 0.601, // avg + 3std
-            to: 0.604, // avg + 3.5std
+            from: 2.445, // avg + 3std
+            to: 2.476, // avg + 3.5std
             color: '#440154',
             thickness: 20
         }]
@@ -85,7 +83,7 @@ Highcharts.chart('lai_speedometer_tropics', {
 
     series: [{
         name: 'Average value',
-        data: [0.555],
+        data: [2.285],
         tooltip: {
             valueSuffix: ' '
         },
