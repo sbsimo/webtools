@@ -74,7 +74,7 @@ Highcharts.chart('speedometer_lai', {
 
     pane: {
         startAngle: -70,
-        endAngle: 69.9,
+        endAngle: 70.0,
         background: null,
         center: ['50%', '75%'],
         size: '100%'
@@ -84,10 +84,10 @@ Highcharts.chart('speedometer_lai', {
     yAxis: {
         min: 1.405,
         max: 1.669,
-        tickPixelInterval: 72,
+        tickInterval: 0.07,
         tickPosition: 'inside',
         tickColor: Highcharts.defaultOptions.chart.backgroundColor || '#FFFFFF',
-        tickLength: 20,
+        tickLength: 10,
         tickWidth: 2,
         minorTickInterval: null,
         labels: {
@@ -135,7 +135,7 @@ Highcharts.chart('speedometer_lai', {
     },
 
     series: [{
-        name: 'Global average value',
+        name: 'Current value',
         data: [1.56],
         tooltip: {
             valueSuffix: ' '
@@ -145,7 +145,7 @@ Highcharts.chart('speedometer_lai', {
             useHTML: true,
             formatter: function () {
                 // Use this function to return the HTML content for the label
-                return '<div class="gauge_dlabel"><span>Global average is</span><span class="val">' + this.y + '</span></div>'
+                return '<div class="gauge_dlabel"><span>Current value:</span><span class="val">' + this.y + '</span></div>'
             },
             borderWidth: 0,
             color: (

@@ -85,10 +85,10 @@ Highcharts.chart('speedometer_swi', {
     yAxis: {
         min: 26.22,
         max: 37.04,
-        tickPixelInterval: 72,
+        tickInterval: 2.9,
         tickPosition: 'inside',
         tickColor: Highcharts.defaultOptions.chart.backgroundColor || '#FFFFFF',
-        tickLength: 20,
+        tickLength: 10,
         tickWidth: 2,
         minorTickInterval: null,
         labels: {
@@ -136,7 +136,7 @@ Highcharts.chart('speedometer_swi', {
     },
 
     series: [{
-        name: 'Global average value',
+        name: 'Current value',
         data: [37.2],
         tooltip: {
             valueSuffix: ' %'
@@ -146,7 +146,7 @@ Highcharts.chart('speedometer_swi', {
             useHTML: true,
             formatter: function () {
                 // Use this function to return the HTML content for the label
-                return '<div class="gauge_dlabel"><span>Average is</span><span class="val">' + this.y + '</span></div>'
+                return '<div class="gauge_dlabel"><span>Current value:</span><span class="val">' + this.y + '</span><span> %</span></div>'
             },
             borderWidth: 0,
             color: (
