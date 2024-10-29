@@ -136,7 +136,7 @@ Highcharts.chart('speedometer_fapar', {
 
     series: [{
         name: 'Current value',
-        data: [0.33968],
+        data: [0.28282],
         tooltip: {
             valueSuffix: ' '
         },
