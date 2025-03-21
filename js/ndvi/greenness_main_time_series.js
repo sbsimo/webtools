@@ -1,4 +1,4 @@
-d3.csv("../../data/greenness/ndvi1km_wgt_avg_34246_CORR.csv", function(err, rows){
+d3.csv("data/greenness/ndvi1km_wgt_avg_34246_CORR.csv", function(err, rows){
 function unpack(rows, key) {
   return rows.map(function(row) {
    return row[key];
