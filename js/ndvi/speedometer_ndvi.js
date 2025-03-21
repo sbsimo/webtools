@@ -47,7 +47,7 @@ function alignLabel() {
 }
 */
 }
-Highcharts.chart('speedometer_swi', {
+Highcharts.chart('speedometer_ndvi', {
 
     chart: {
         type: 'gauge',
@@ -56,10 +56,10 @@ Highcharts.chart('speedometer_swi', {
         plotBorderWidth: 0,
         plotShadow: false,
         height: '50%',
-        events: {
+         events: {
             load: alignLabel,
             redraw: alignLabel
-        },
+        }
     },
     plotOptions: {
         series: {
@@ -69,13 +69,12 @@ Highcharts.chart('speedometer_swi', {
         }
     },
     title: {
-        text: 'Soil Moisture in plant root zone',
-
+        text: 'Vegetation Greenness (fake values)'
     },
 
     pane: {
         startAngle: -70,
-        endAngle: 69.9,
+        endAngle: 70.0,
         background: null,
         center: ['50%', '75%'],
         size: '100%'
@@ -83,9 +82,9 @@ Highcharts.chart('speedometer_swi', {
 
     // the value axis
     yAxis: {
-        min: 26.22,
-        max: 37.04,
-        tickInterval: 2.9,
+        min: 1.405,
+        max: 1.669,
+        tickInterval: 0.07,
         tickPosition: 'inside',
         tickColor: Highcharts.defaultOptions.chart.backgroundColor || '#FFFFFF',
         tickLength: 10,
@@ -98,38 +97,38 @@ Highcharts.chart('speedometer_swi', {
             }
         },
         plotBands: [{
-            from: 26.22, // avg - 3.5std
-            to: 26.99, // avg - 3std
+            from: 1.405, // avg - 3.5std
+            to: 1.424, // avg - 3std
             color: 'rgb(140,81,10)', // IPCC colors
             thickness: 20
         }, {
-            from: 26.99, // avg - 3std
-            to: 28.54, // avg - 2std
+            from: 1.424, // avg - 3std
+            to: 1.462, // avg - 2std
             color: 'rgb(216,179,101)',
             thickness: 20
         }, {
-            from: 28.54, // avg - 2std
-            to: 30.08, // avg - 1std
+            from: 1.462, // avg - 2std
+            to: 1.499, // avg - 1std
             color: 'rgb(246,232,195)',
             thickness: 20
         }, {
-            from: 30.08, // avg - 1std
-            to: 33.18, // avg + 1std
+            from: 1.499, // avg - 1std
+            to: 1.575, // avg + 1std
             color: 'rgb(245,245,245)',
             thickness: 20
         }, {
-            from: 33.18, // avg + 1std
-            to: 34.72, // avg + 2std
+            from: 1.575, // avg + 1std
+            to: 1.613, // avg + 2std
             color: 'rgb(199,234,229)',
             thickness: 20
         }, {
-            from: 34.72, // avg + 2std
-            to: 36.27, // avg + 3std
+            from: 1.613, // avg + 2std
+            to: 1.650, // avg + 3std
             color: 'rgb(90,180,172)',
             thickness: 20
         }, {
-            from: 36.27, // avg + 3std
-            to: 37.04, // avg + 3.5std
+            from: 1.650, // avg + 3std
+            to: 1.669, // avg + 3.5std
             color: 'rgb(1,102,94)',
             thickness: 20
         }]
@@ -137,16 +136,16 @@ Highcharts.chart('speedometer_swi', {
 
     series: [{
         name: 'Current value',
-        data: [37.2],
+        data: [1.56],
         tooltip: {
-            valueSuffix: ' %'
+            valueSuffix: ' '
         },
         dataLabels: {
-            // format: 'global average is {y} %',
+            //format: 'global average is {y}',
             useHTML: true,
             formatter: function () {
                 // Use this function to return the HTML content for the label
-                return '<div class="gauge_dlabel"><span>Current value:</span><span class="val">' + this.y + '</span><span> %</span></div>'
+                return '<div class="gauge_dlabel"><span>Current value:</span><span class="val">' + this.y + '</span></div>'
             },
             borderWidth: 0,
             color: (

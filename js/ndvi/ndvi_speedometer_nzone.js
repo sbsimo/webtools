@@ -46,7 +46,7 @@ Highcharts.chart('ndvi_speedometer_nzone', {
         plotBands: [{
             from: 0.385, // avg - 3.5std
             to: 0.395, // avg - 3std
-            color: 'rgb(140,81,10)', //viridis scale 7 categories -> https://waldyrious.net/viridis-palette-generator/
+            color: 'rgb(140,81,10)', //IPCC colors
             thickness: 20
         }, {
             from: 0.395, // avg - 3std
