@@ -155,64 +155,21 @@
 
     <div class="row mb-3">
       <div class="col-md-8 ">
-        <img src="/img/IPCC_regions_zscore2024.png" alt="anomaly on IPCC AR6 regions" style="width:700px;">
+        <img src="/img/NDVI_zscore_IPCC_regions.png" alt="anomaly on IPCC AR6 regions" style="width:700px;">
       </div>
       <div class="col-md-4 ">
-        <script type="application/json">{
-          "service": "charts",
-          "version": "2.0",
-          "dataset": {
-            "format": "csv",
-            "source": "https://sbsimo.github.io/webtools/data/lai_anomaly_lcc.csv",
-            "options": {
-              "decimal": "."
-            }
-          },
-          "data": {
-            "chart": {
-              "type": "column"
-            },
-            "title": {
-              "text": "Land cover classification"
-            },
-            "subtitle": {
-              "text": "Standardised anomaly"
-            },
-            "plotOptions": {
-              "column": {
-                "colorByPoint": true
-              },
-              "series": {
-                "dataLabels": {
-                  "enabled": true
-                }
-              }
-            },
-            "colors": [
-              "#21918c"
-            ],
-            "legend": {
-              "enabled": false
-            },
-            "xAxis": {
-              "type": "category"
-            },
-            "yAxis": {
-              "title": {
-                "text": ""
-              }
-            }
-          }
-        }</script>
+        <div id="ndvi_bar_chart"></div>
+        <script src="js/ndvi/ndvi_bar_chart.js" defer></script>
       </div>
     </div>
 
     <br>
-    <p class="lead">This dashboard shows the average values and anomalies of leaf density in plant canopies, extracted on the CLMS Leaf Area Index (LAI). The results displayed here refer to the period indicated above.</p>
-    <p>Anomalies are calculated with reference to the long term average for the same yearly period; the time series starts in 2014.</p>
+    <p class="lead">This dashboard shows the average values and anomalies of greenness, extracted from the CLMS Difference Vegetation Index (NDVI) as a proxy. The results displayed here refer to the period indicated in the title.</p>
+    <p>Anomalies are calculated with reference to the long term average for the same yearly period; the time series starts in 1999.</p>
     <ul>
-        <li>Get more detailed information on the CLMS Global LAI 300m collection <a href="https://land.copernicus.eu/en/products/vegetation/leaf-area-index-300m-v1.0" target="_blank">here</a></li>
-        <li>Explore and download the full dataset <a href="https://land.copernicus.vgt.vito.be/PDF/portal/Application.html#Browse;Root=512260;Collection=1000062;Time=NORMAL,NORMAL,-1,,,-1,," target="_blank">here</a></li>
+        <li>Get more detailed information on the CLMS Global NDVI 300m dataset <a href="https://land.copernicus.eu/en/products/vegetation/normalised-difference-vegetation-index-v2-0-300m" target="_blank">here</a></li>
+        <li>Get more detailed information on the CLMS Global NDVI 1km dataset <a href="https://land.copernicus.eu/en/products/vegetation/normalised-difference-vegetation-index-v3-0-1km" target="_blank">here</a></li>
+        <li>Explore and download the data <a href="https://globalland.vito.be/download/netcdf/ndvi" target="_blank">here</a></li>
     </ul>
 </main>
 <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>

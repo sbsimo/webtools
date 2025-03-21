@@ -46,37 +46,37 @@ Highcharts.chart('ndvi_speedometer_nzone', {
         plotBands: [{
             from: 0.385, // avg - 3.5std
             to: 0.395, // avg - 3std
-            color: '#fde725', //viridis scale 7 categories -> https://waldyrious.net/viridis-palette-generator/
+            color: 'rgb(140,81,10)', //viridis scale 7 categories -> https://waldyrious.net/viridis-palette-generator/
             thickness: 20
         }, {
             from: 0.395, // avg - 3std
             to: 0.414, // avg - 2std
-            color: '#90d743',
+            color: 'rgb(216,179,101)',
             thickness: 20
         }, {
             from: 0.414, // avg - 2std
             to: 0.433, // avg - 1std
-            color: '#35b779',
+            color: 'rgb(246,232,195)',
             thickness: 20
         }, {
             from: 0.433, // avg - 1std
             to: 0.472, // avg + 1std
-            color: '#21918c',
+            color: 'rgb(245,245,245)',
             thickness: 20
         }, {
             from: 0.472, // avg + 1std
             to: 0.491, // avg + 2std
-            color: '#31688e',
+            color: 'rgb(199,234,229)',
             thickness: 20
         }, {
             from: 0.491, // avg + 2std
             to: 0.510, // avg + 3std
-            color: '#443983',
+            color: 'rgb(90,180,172)',
             thickness: 20
         }, {
             from: 0.510, // avg + 3std
             to: 0.520, // avg + 3.5std
-            color: '#440154',
+            color: 'rgb(1,102,94    )',
             thickness: 20
         }]
     },
