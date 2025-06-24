@@ -1,28 +1,22 @@
+avg = 0.41190;
+std = 0.00877;
+cur_value = 0.414;
+
+function roundToThirdDecimal(num) {
+    if (typeof num !== 'number') {
+      throw new TypeError('Input must be a number');
+    }
+    return Math.round(num * 1000) / 1000;
+}
+
+avg_m3p5std = roundToThirdDecimal(avg - 3.5 * std);
+avg_p3p5std = roundToThirdDecimal(avg + 3.5 * std);
 
 function alignLabel() {
     var chart = this;
 
     var newX = chart.plotWidth / 2 + chart.plotLeft,
         newY = chart.plotHeight / 2 + chart.plotTop;
-    console.log(newX, newY, chart.plotLeft, chart.plotTop)
-    //400 216 10 47
-
-    console.info(chart.plotHeight, chart.plotTop)
-    //338 47 ==>c 338/2 = 169
-    console.warn(chart.plotBox)
-    /*
-    {
-"x": 10,
-"y": 47,
-"width": 780,
-"height": 338
-}
-    */
-    //.highcharts-axis-labels 328px
-    //40  ==> x=305
-    //800
-    //330 /2 = 165
-
 
     var addText = function (text, posX, posY) {
         return chart.renderer.text(text, newX + posX, newY + posY)
@@ -42,10 +36,6 @@ function alignLabel() {
     addText('Unusually low', -120, 40);
     addText('Unusually high', 120, 40);
 
-    /* if (addText) {
-        addText.destroy();
-}
-*/
 }
 Highcharts.chart('speedometer_ndvi', {
 
@@ -69,7 +59,7 @@ Highcharts.chart('speedometer_ndvi', {
         }
     },
     title: {
-        text: 'Vegetation Greenness (fake values)'
+        text: '-----Vegetation Greenness (fake value)'
     },
 
     pane: {
@@ -82,9 +72,9 @@ Highcharts.chart('speedometer_ndvi', {
 
     // the value axis
     yAxis: {
-        min: 1.405,
-        max: 1.669,
-        tickInterval: 0.07,
+        min: avg_m3p5std,
+        max: avg_p3p5std,
+        tickInterval: roundToThirdDecimal((avg_p3p5std - avg_m3p5std) / 4),
         tickPosition: 'inside',
         tickColor: Highcharts.defaultOptions.chart.backgroundColor || '#FFFFFF',
         tickLength: 10,
@@ -97,38 +87,38 @@ Highcharts.chart('speedometer_ndvi', {
             }
         },
         plotBands: [{
-            from: 1.405, // avg - 3.5std
-            to: 1.424, // avg - 3std
+            from: avg_m3p5std, // avg - 3.5std
+            to: avg - 3 * std, // avg - 3std
             color: 'rgb(140,81,10)', // IPCC colors
             thickness: 20
         }, {
-            from: 1.424, // avg - 3std
-            to: 1.462, // avg - 2std
+            from: avg - 3 * std, // avg - 3std
+            to: avg - 2 * std, // avg - 2std
             color: 'rgb(216,179,101)',
             thickness: 20
         }, {
-            from: 1.462, // avg - 2std
-            to: 1.499, // avg - 1std
+            from: avg - 2 * std, // avg - 2std
+            to: avg - 1 * std, // avg - 1std
             color: 'rgb(246,232,195)',
             thickness: 20
         }, {
-            from: 1.499, // avg - 1std
-            to: 1.575, // avg + 1std
+            from: avg - 1 * std, // avg - 1std
+            to: avg + 1 * std, // avg + 1std
             color: 'rgb(245,245,245)',
             thickness: 20
         }, {
-            from: 1.575, // avg + 1std
-            to: 1.613, // avg + 2std
+            from: avg + 1 * std, // avg + 1std
+            to: avg + 2 * std, // avg + 2std
             color: 'rgb(199,234,229)',
             thickness: 20
         }, {
-            from: 1.613, // avg + 2std
-            to: 1.650, // avg + 3std
+            from: avg + 2 * std, // avg + 2std
+            to: avg + 3 * std, // avg + 3std
             color: 'rgb(90,180,172)',
             thickness: 20
         }, {
-            from: 1.650, // avg + 3std
-            to: 1.669, // avg + 3.5std
+            from: avg + 3 * std, // avg + 3std
+            to: avg + 3.5 * std, // avg + 3.5std
             color: 'rgb(1,102,94)',
             thickness: 20
         }]
@@ -136,12 +126,12 @@ Highcharts.chart('speedometer_ndvi', {
 
     series: [{
         name: 'Current value',
-        data: [1.56],
+        data: [cur_value],
         tooltip: {
             valueSuffix: ' '
         },
         dataLabels: {
-            //format: 'global average is {y}',
+
             useHTML: true,
             formatter: function () {
                 // Use this function to return the HTML content for the label
