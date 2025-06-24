@@ -1,6 +1,6 @@
-avg = 0.41190;
-std = 0.00877;
-cur_value = 0.414;
+avg = 0.41633;
+std = 0.01081;
+cur_value = 0.431;
 
 function roundToThirdDecimal(num) {
     if (typeof num !== 'number') {
@@ -59,7 +59,7 @@ Highcharts.chart('speedometer_ndvi', {
         }
     },
     title: {
-        text: '-----Vegetation Greenness (fake value)'
+        text: 'Vegetation Greenness'
     },
 
     pane: {
