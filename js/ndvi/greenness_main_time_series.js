@@ -13,23 +13,21 @@ x: unpack(rows, 'datetime'),
 y: unpack(rows, 'NDVI1km_avg_CORR_qflag'),
 line: {color: '#17BECF'}
 }
-/*
-var trace2 = {
-type: "scatter",
-mode: "lines",
-name: 'AAPL Low',
-x: unpack(rows, 'Date'),
-y: unpack(rows, 'AAPL.Low'),
-line: {color: '#7F7F7F'}
-}
-*/
+
 //var data = [trace1,trace2];
 var data = [trace1];
 
 var layout = {
-title: {
-  text: 'Date'
-},
+    title: {
+      text: 'NDVI time series',
+      subtitle: {
+        text: 'global average values with 10-day steps'
+      }
+    },
+    xaxis: {
+        type: 'date',            // Required for date-based axis
+        dtick: 'M6'             // Gridline every 1 month
+    }
 };
 
 Plotly.newPlot("line-chart-container", data, layout);
