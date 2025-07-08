@@ -1,3 +1,8 @@
+avg = 0.4525;
+std = 0.0195;
+cur_value = 0.472;
+zscore = Math.round(10 * (cur_value - avg) / std) / 10;
+
 Highcharts.chart('ndvi_speedometer_nzone', {
 
     chart: {
@@ -16,7 +21,7 @@ Highcharts.chart('ndvi_speedometer_nzone', {
         }
     },
     title: {
-        text: 'Northern zone NDVI'
+        text: 'Northern zone'
     },
 
     pane: {
@@ -29,9 +34,9 @@ Highcharts.chart('ndvi_speedometer_nzone', {
 
     // the value axis
     yAxis: {
-        min: 0.385,
-        max: 0.520,
-        tickInterval: 0.034, // (max-min)/4
+        min: -3.5,
+        max: +3.5,
+        tickInterval: 1,
         tickPosition: 'inside',
         tickColor: Highcharts.defaultOptions.chart.backgroundColor || '#FFFFFF',
         tickLength: 10,
@@ -44,46 +49,46 @@ Highcharts.chart('ndvi_speedometer_nzone', {
             }
         },
         plotBands: [{
-            from: 0.385, // avg - 3.5std
-            to: 0.395, // avg - 3std
+            from: -3.5,
+            to: -3,
             color: 'rgb(140,81,10)', //IPCC colors
             thickness: 20
         }, {
-            from: 0.395, // avg - 3std
-            to: 0.414, // avg - 2std
+            from: -3,
+            to: -2,
             color: 'rgb(216,179,101)',
             thickness: 20
         }, {
-            from: 0.414, // avg - 2std
-            to: 0.433, // avg - 1std
+            from: -2,
+            to: -1,
             color: 'rgb(246,232,195)',
             thickness: 20
         }, {
-            from: 0.433, // avg - 1std
-            to: 0.472, // avg + 1std
+            from: -1,
+            to: +1,
             color: 'rgb(245,245,245)',
             thickness: 20
         }, {
-            from: 0.472, // avg + 1std
-            to: 0.491, // avg + 2std
+            from: +1,
+            to: +2,
             color: 'rgb(199,234,229)',
             thickness: 20
         }, {
-            from: 0.491, // avg + 2std
-            to: 0.510, // avg + 3std
+            from: +2,
+            to: +3,
             color: 'rgb(90,180,172)',
             thickness: 20
         }, {
-            from: 0.510, // avg + 3std
-            to: 0.520, // avg + 3.5std
+            from: +3,
+            to: +3.5,
             color: 'rgb(1,102,94    )',
             thickness: 20
         }]
     },
 
     series: [{
-        name: 'Current value',
-        data: [0.472],
+        name: 'Standardised anomaly',
+        data: [zscore],
         tooltip: {
             valueSuffix: ' '
         },
@@ -92,10 +97,8 @@ Highcharts.chart('ndvi_speedometer_nzone', {
             useHTML: true,
             formatter: function () {
                 // Use this function to return the HTML content for the label
-                return '<div class="gauge_dlabel"><span>Current value:</span><span class="val">' + this.y + '</span></div>'
+                return '<div class="gauge_dlabel"><span>Standardised anomaly:</span><span class="val">' + this.y + '</span></div>'
             },
-
-            //format: 'average is <h2>{y}</h2>',
 
             borderWidth: 0,
             color: (

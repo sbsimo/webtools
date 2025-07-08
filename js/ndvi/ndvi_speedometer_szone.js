@@ -1,16 +1,7 @@
 avg = 0.33021;
 std = 0.01204;
 cur_value = 0.345;
-
-function roundToThirdDecimal(num) {
-    if (typeof num !== 'number') {
-      throw new TypeError('Input must be a number');
-    }
-    return Math.round(num * 1000) / 1000;
-}
-
-avg_m3p5std = roundToThirdDecimal(avg - 3.5 * std);
-avg_p3p5std = roundToThirdDecimal(avg + 3.5 * std);
+zscore = Math.round(10 * (cur_value - avg) / std) / 10;
 
 Highcharts.chart('ndvi_speedometer_szone', {
 
@@ -30,7 +21,7 @@ Highcharts.chart('ndvi_speedometer_szone', {
         }
     },
     title: {
-        text: 'Southern zone NDVI'
+        text: 'Southern zone'
     },
 
     pane: {
@@ -43,9 +34,9 @@ Highcharts.chart('ndvi_speedometer_szone', {
 
     // the value axis
     yAxis: {
-        min: avg_m3p5std,
-        max: avg_p3p5std,
-        tickInterval: roundToThirdDecimal((avg_p3p5std - avg_m3p5std) / 4), // (max-min)/4
+        min: -3.5,
+        max: +3.5,
+        tickInterval: 1,
         tickPosition: 'inside',
         tickColor: Highcharts.defaultOptions.chart.backgroundColor || '#FFFFFF',
         tickLength: 10,
@@ -58,46 +49,46 @@ Highcharts.chart('ndvi_speedometer_szone', {
             }
         },
         plotBands: [{
-            from: avg_m3p5std, // avg - 3.5std
-            to: avg - 3 * std, // avg - 3std
+            from: -3.5,
+            to: -3,
             color: 'rgb(140,81,10)', //IPCC colors
             thickness: 20
         }, {
-            from: avg - 3 * std, // avg - 3std
-            to: avg - 2 * std, // avg - 2std
+            from: -3,
+            to: -2,
             color: 'rgb(216,179,101)',
             thickness: 20
         }, {
-            from: avg - 2 * std, // avg - 2std
-            to: avg - 1 * std, // avg - 1std
+            from: -2,
+            to: -1,
             color: 'rgb(246,232,195)',
             thickness: 20
         }, {
-            from: avg - 1 * std, // avg - 1std
-            to: avg + 1 * std, // avg + 1std
+            from: -1,
+            to: +1,
             color: 'rgb(245,245,245)',
             thickness: 20
         }, {
-            from: avg + 1 * std, // avg + 1std
-            to: avg + 2 * std, // avg + 2std
+            from: +1,
+            to: +2,
             color: 'rgb(199,234,229)',
             thickness: 20
         }, {
-            from: avg + 2 * std, // avg + 2std
-            to: avg + 3 * std, // avg + 3std
+            from: +2,
+            to: +3,
             color: 'rgb(90,180,172)',
             thickness: 20
         }, {
-            from: avg + 3 * std, // avg + 3std
-            to: avg + 3.5 * std, // avg + 3.5std
+            from: +3,
+            to: +3.5,
             color: 'rgb(1,102,94    )',
             thickness: 20
         }]
     },
 
     series: [{
-        name: 'Current value',
-        data: [cur_value],
+        name: 'Standardised anomaly',
+        data: [zscore],
         tooltip: {
             valueSuffix: ' '
         },
@@ -106,10 +97,8 @@ Highcharts.chart('ndvi_speedometer_szone', {
             useHTML: true,
             formatter: function () {
                 // Use this function to return the HTML content for the label
-                return '<div class="gauge_dlabel"><span>Current value:</span><span class="val">' + this.y + '</span></div>'
+                return '<div class="gauge_dlabel"><span>Standardised anomaly:</span><span class="val">' + this.y + '</span></div>'
             },
-
-            //format: 'average is <h2>{y}</h2>',
 
             borderWidth: 0,
             color: (
