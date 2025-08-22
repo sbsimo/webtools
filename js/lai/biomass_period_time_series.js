@@ -1,4 +1,4 @@
-d3.csv("data/biomass/lai1km_global_wgt_avg_v4_CORR.csv", function(err, rows){
+d3.csv("data/biomass/lai1km_global_yearly_wgt_avg_v4_CORR.csv", function(err, rows){
 function unpack(rows, key) {
   return rows.map(function(row) {
    return row[key];
@@ -9,8 +9,8 @@ var trace1 = {
 type: "scatter",
 mode: "lines",
 name: 'AAPL High',
-x: unpack(rows, 'datetime'),
-y: unpack(rows, 'LAI_corr3'),
+x: unpack(rows, 'year'),
+y: unpack(rows, 'LAI_corr3_round'),
 line: {color: '#17BECF'}
 }
 
@@ -21,12 +21,12 @@ var layout = {
     title: {
       text: 'LAI time series for Q3',
       subtitle: {
-        text: 'global average values with 10-day steps'
+        text: 'LAI global average values with yearly frequency'
       }
     },
     xaxis: {
-        type: 'date',            // Required for date-based axis
-        dtick: 'M6'             // Gridline every 1 month
+        type: '-',            // Required for date-based axis
+        dtick: '1'             // Gridline every 1 month
     }
 };
 

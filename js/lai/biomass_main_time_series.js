@@ -10,7 +10,7 @@ type: "scatter",
 mode: "lines",
 name: 'AAPL High',
 x: unpack(rows, 'datetime'),
-y: unpack(rows, 'LAI_corr3'),
+y: unpack(rows, 'LAI_corr3_round'),
 line: {color: '#17BECF'}
 }
 
